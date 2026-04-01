@@ -9,11 +9,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
 /* ===== PAGE TRANSITION ===== */
 .page-transition {
   position: fixed;
-  inset: 0;
+  inset: 0; /* shorthand for top:0; bottom:0; left:0; right:0; */
   background: #1F4045;
   z-index: 9999;
   transform: scaleY(1);
@@ -21,8 +20,10 @@ html {
   transition: transform 1s ease;
 }
 
+/* When page is loaded, hide it */
 .page-transition.loaded {
   transform: scaleY(0);
+  pointer-events: none; /* make sure it doesn't block clicks */
 }
 
 /* ===== NAV ===== */
