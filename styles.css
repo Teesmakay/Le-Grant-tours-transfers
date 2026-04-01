@@ -110,7 +110,7 @@ html {
 /* ===== HERO ===== */
 .hero {
   height: 100vh;
-  background: url('images/hero.jpg') center/cover;
+  background: url('hero.jpg') center/cover;
   position: relative;
 }
 
