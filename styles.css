@@ -276,3 +276,64 @@ button {
 
   .pilots-container, .contact-container { flex-direction: column; gap: 20px; }
 }
+/* SIDE TEXT NEXT TO VIDEO */
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-section video {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  display: none; /* hide overlay if using side text */
+}
+
+.video-side-text {
+  width: 35%;
+  color: white;
+  padding: 40px;
+  z-index: 2;
+}
+
+.video-side-text h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.video-side-text h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.video-side-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .video-section video {
+    width: 100%;
+    height: 300px;
+  }
+
+  .video-side-text {
+    width: 100%;
+    padding: 20px;
+  }
+}
