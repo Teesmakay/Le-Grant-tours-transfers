@@ -109,7 +109,7 @@ const fleet = [
         passengers: "7",
         luggage: "6",
         wifi: "Free",
-        img: "images/car2.jpg"
+        img: "car2.jpg"
     },
     {
         name: "Mercedes-Benz S-Class",
@@ -117,7 +117,7 @@ const fleet = [
         passengers: "4",
         luggage: "3",
         wifi: "Premium",
-        img: "images/car1.jpg"
+        img: "car1.jpg"
     },
     {
         name: "Mercedes-Benz E-Class",
@@ -125,7 +125,7 @@ const fleet = [
         passengers: "4",
         luggage: "2",
         wifi: "Free",
-        img: "images/car3.jpg"
+        img: "car3.jpg"
     }
 ];
 
