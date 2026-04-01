@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LE GRANT — Luxury Chauffeur</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- PAGE TRANSITION -->
+  <div class="page-transition"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo-container">
+      <img src="images/logo.jpg" alt="Le Grant Logo">
+      <span class="logo-text">LE GRANT</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- FULLSCREEN MENU -->
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="booking.html">Booking</a>
+  </div>
+    <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-text fade-in">
+      <h1>Drive Luxury.<br>Arrive Prestige.</h1>
+      <p>Premium chauffeur services with Mercedes-Benz fleet</p>
+      <button onclick="openBooking()">Book Now</button>
+    </div>
+  </section>
+
+  <!-- FLEET -->
+  <section class="fleet">
+    <div class="fleet-wrapper">
+
+      <!-- LEFT CONTENT -->
+      <div class="fleet-info">
+        <p class="subtitle">Our Fleet</p>
+        <h2 id="carTitle">Mercedes-Benz V-Class</h2>
+
+        <p id="carDesc">
+          Spacious elegance for groups. Ideal for family transfers and corporate delegations.
+        </p>
+
+        <div class="specs">
+          <div>
+            <span>Passengers</span>
+            <h3 id="passengers">7</h3>
+          </div>
+
+          <div>
+            <span>Luggage</span>
+            <h3 id="luggage">6</h3>
+          </div>
+
+          <div>
+            <span>Wi-Fi</span>
+            <h3 id="wifi">Free</h3>
+          </div>
+        </div>
+
+        <div class="counter">
+          <span id="current">01</span>
+          <span>/</span>
+          <span id="total">03</span>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE SLIDER -->
+      <div class="fleet-slider">
+        <img id="carImage" src="images/car2.jpg" alt="Car Image">
+
+        <button class="arrow left" onclick="prevCar()">←</button>
+        <button class="arrow right" onclick="nextCar()">→</button>
+      </div>
+
+    </div>
+  </section>
+    <!-- SERVICES -->
+  <section class="services">
+
+    <div class="services-header fade-in">
+      <p class="subtitle">Our Services</p>
+      <h2>Luxury Travel Solutions</h2>
+      <p class="services-desc">
+        Tailored chauffeur services designed for comfort, prestige, and reliability across every journey.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <h3>Airport Transfers</h3>
+        <p>Seamless airport pickups and drop-offs with real-time flight tracking.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <h3>Corporate Travel</h3>
+        <p>Executive transport for meetings, events, and VIP business travel.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <h3>Private Events</h3>
+        <p>Arrive in elegance for weddings, celebrations, and exclusive gatherings.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <h3>Hourly Chauffeur</h3>
+        <p>Flexible bookings with a dedicated driver at your service.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" id="videoSection">
+    <video id="luxuryVideo" muted playsinline>
+      <source src="images/luxury.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="video-content">
+      <h2 class="video-title">The LE GRANT Experience</h2>
+      <p class="video-sub">Precision. Luxury. Presence.</p>
+    </div>
+  </section>
+    <!-- PILOTS -->
+  <section class="pilots-section">
+    <div class="pilots-container">
+
+      <div class="pilots-image">
+        <img src="images/driver.jpg" alt="Chauffeur opening door">
+      </div>
+
+      <div class="pilots-content">
+        <p class="subtitle">Our Pilots</p>
+        <h2>The Quiet Connoisseur</h2>
+
+        <p class="pilots-text">
+          At Le Grant, we believe luxury is not about ostentation — it's about the absence of inconvenience.
+        </p>
+
+        <p class="pilots-text">
+          Our chauffeurs, whom we call Pilots, are the embodiment of this philosophy.
+        </p>
+
+        <div class="pilots-stats">
+
+          <div class="stat-item">
+            <i class="fas fa-user-tie"></i>
+            <div>
+              <h3>Professional Chauffeurs</h3>
+              <span>Certified & vetted</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <i class="fas fa-award"></i>
+            <div>
+              <h3>Years of Excellence</h3>
+              <span>Since 2015</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>On-Time Guarantee</h3>
+              <span>99.8% punctuality</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <h2>Book Your Experience</h2>
+        <p>
+          Whether it's an airport transfer, a corporate event, or a special occasion —
+          our team is ready to curate the perfect journey.
+        </p>
+
+        <p><strong>Call Us</strong><br>+27 123 456 789</p>
+        <p><strong>Email</strong><br>reservations@legrant.com</p>
+        <p><strong>Based In</strong><br>Available Worldwide</p>
+      </div>
+
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+        <textarea placeholder="Tell Us About Your Journey"></textarea>
+        <button>Request a Quote</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div>
+        <h2>LE GRANT</h2>
+        <p>Luxury beyond transport</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Booking</a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Le Grant Tours & Transfers. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="booking-modal" id="bookingModal">
+    <div class="booking-content">
+
+      <span class="close-btn" onclick="closeBooking()">✕</span>
+
+      <h2>Book Your Ride</h2>
+
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="pickup" placeholder="Pickup Location">
+      <input type="text" id="dropoff" placeholder="Drop-off Location">
+      <input type="date" id="date">
+
+      <select id="car">
+        <option>S-Class</option>
+        <option>V-Class</option>
+        <option>E-Class</option>
+      </select>
+
+      <button onclick="sendBooking()">Confirm Booking</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
