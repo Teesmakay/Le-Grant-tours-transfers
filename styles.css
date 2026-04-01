@@ -276,7 +276,7 @@ button {
 
   .pilots-container, .contact-container { flex-direction: column; gap: 20px; }
 }
-/* SIDE TEXT NEXT TO VIDEO */
+/* ===== VIDEO SECTION WITH SIDE TEXT ===== */
 .video-section {
   display: flex;
   align-items: center;
@@ -284,6 +284,7 @@ button {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif; /* consistent font */
 }
 
 .video-section video {
@@ -293,7 +294,7 @@ button {
 }
 
 .video-overlay {
-  display: none; /* hide overlay if using side text */
+  display: none; /* hide overlay when using side text */
 }
 
 .video-side-text {
@@ -301,26 +302,30 @@ button {
   color: white;
   padding: 40px;
   z-index: 2;
+  font-family: 'Helvetica Neue', sans-serif; /* ensure consistency */
 }
 
 .video-side-text h3 {
   font-size: 36px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .video-side-text h4 {
   font-size: 24px;
   margin-bottom: 15px;
   opacity: 0.85;
+  font-weight: normal;
 }
 
 .video-side-text p {
   font-size: 16px;
   line-height: 1.6;
   opacity: 0.9;
+  font-weight: normal;
 }
 
-/* MOBILE */
+/* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 768px) {
   .video-section {
     flex-direction: column;
