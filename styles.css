@@ -96,10 +96,19 @@ html {
   left: 10%;
   transform: translateY(-50%);
   color: white;
+  max-width: 500px;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
 }
 
 button {
@@ -113,6 +122,7 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
 
 /* ===== VIDEO FIX (IMPORTANT) ===== */
 .video-section {
@@ -598,4 +608,256 @@ button:hover {
   text-align: center;
   font-size: 13px;
   opacity: 0.6;
+}
+/* ===== ANIMATIONS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* NAV SCROLL EFFECT */
+.nav.scrolled {
+  background: #1F4045;
+  transition: 0.3s;
+}
+/* ===== ABOUT PAGE ===== */
+
+.about-hero {
+  height: 60vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+}
+
+.about-story {
+  padding: 100px 60px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-values {
+  padding: 100px 60px;
+  background: #7F9492;
+  color: white;
+  text-align: center;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.value {
+  max-width: 250px;
+}
+
+.about-cta {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ===== ABOUT PAGE ===== */
+
+.about-hero {
+  height: 60vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+}
+
+.about-story {
+  padding: 100px 60px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  width: 50%;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* VALUES */
+.about-values {
+  padding: 100px 60px;
+  background: #7F9492;
+  color: white;
+  text-align: center;
+}
+
+.values-header {
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.value-card:hover {
+  background: #D0AE8A;
+  color: #1F4045;
+  transform: translateY(-5px);
+}
+
+/* CTA */
+.about-cta {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* FIX ANCHOR SCROLL OFFSET */
+section {
+  scroll-margin-top: 100px;
+}
+/* ===== BOOKING PAGE ===== */
+
+.booking-hero {
+  height: 50vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+}
+
+.booking-section {
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.booking-container h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  margin-bottom: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+}
+
+.booking-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.booking-form button {
+  background: #D0AE8A;
+  padding: 14px;
+  font-weight: bold;
+}
+
+/* CTA */
+.booking-cta {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.booking-cta button {
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 60px 20px;
+  }
 }
