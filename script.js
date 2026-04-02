@@ -2,10 +2,16 @@
 const menuOverlay = document.getElementById("menuOverlay");
 
 function toggleMenu() {
-    if (!menuOverlay) return;
-
-    menuOverlay.classList.toggle("active");
+    const menu = document.getElementById("menuOverlay");
+    menu.classList.toggle("active");
 }
+
+// CLOSE MENU WHEN CLICKING LINK (VERY IMPORTANT)
+document.querySelectorAll(".menu-overlay a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("menuOverlay").classList.remove("active");
+    });
+});
 // Wait for the page to load
 window.addEventListener("load", () => {
     const transition = document.querySelector(".page-transition");
@@ -177,40 +183,3 @@ setInterval(nextCar, 5000);
 
 // INIT
 updateFleet();
-
-// ===== VIDEO CINEMATIC CONTROL =====
-const video = document.getElementById("luxuryVideo");
-const videoSection = document.getElementById("videoSection");
-const videoText = document.querySelector(".video-content");
-
-if (video && videoSection && videoText) {
-
-    window.addEventListener("scroll", () => {
-
-        const rect = videoSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // SAFE PLAY
-        if (rect.top < windowHeight && rect.bottom > 0) {
-            video.play().catch(() => {});
-        } else {
-            video.pause();
-        }
-
-        let progress = Math.min(
-            Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0),
-            1
-        );
-
-        // ZOOM EFFECT
-        video.style.transform = `scale(${1.2 - progress * 0.2})`;
-
-        // TEXT REVEAL
-        if (progress > 0.3) {
-            videoText.classList.add("show");
-        } else {
-            videoText.classList.remove("show");
-        }
-    });
-
-}
