@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking — LE GRANT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo">
+      <span class="logo-text">LE GRANT</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- MENU -->
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="booking.html">Booking</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="booking-hero">
+    <h1>Reserve Your Journey</h1>
+  </section>
+
+  <!-- FORM -->
+  <section class="booking-section">
+    <div class="booking-container">
+
+      <h2>Book Your Ride</h2>
+
+      <div class="booking-form">
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="text" id="pickup" placeholder="Pickup Location">
+        <input type="text" id="dropoff" placeholder="Drop-off Location">
+        <input type="date" id="date">
+
+        <select id="car">
+          <option value="">Select Vehicle</option>
+          <option>S-Class</option>
+          <option>V-Class</option>
+          <option>E-Class</option>
+        </select>
+
+        <textarea id="notes" placeholder="Additional Requests (optional)"></textarea>
+
+        <button onclick="sendBooking()">Confirm Booking</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="booking-cta">
+    <h2>Prefer speaking directly?</h2>
+    <a href="https://wa.me/278XXXXXXXXX">
+      <button>Chat on WhatsApp</button>
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div>
+        <h2>LE GRANT</h2>
+        <p>Luxury beyond transport</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#fleet">Fleet</a>
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Booking</a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Le Grant Tours & Transfers. All rights reserved.
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Include EmailJS SDK (make sure this is outside any <script> block) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function(){
+    emailjs.init("3IgTtz1UxZXbtt4eT"); // your public key
+  })();
+
+  // Booking form submission
+  const bookingForm = document.getElementById("booking-form");
+
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      emailjs.sendForm("service_4r4b12i", "template_zgdzgqs", this)
+      .then(function(){
+        alert("✅ Booking request sent! We will contact you shortly.");
+        bookingForm.reset();
+      }, function(error){
+        console.error("EmailJS error:", error);
+        alert("❌ Failed to send. Please try again or use WhatsApp.");
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
