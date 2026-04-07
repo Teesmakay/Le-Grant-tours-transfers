@@ -80,7 +80,7 @@ html {
 /* ===== HERO ===== */
 .hero {
   height: 100vh;
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('car2.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -703,7 +703,7 @@ button:hover {
 
 .about-hero {
   height: 60vh;
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('Chauffeur.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -860,4 +860,248 @@ section {
   .booking-section {
     padding: 60px 20px;
   }
+}
+/* ===== SERVICES PAGE ===== */
+
+.services-hero {
+  height: 50vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+}
+
+.services-intro {
+  padding: 80px 60px;
+  max-width: 800px;
+}
+
+.services-detailed {
+  padding: 80px 60px;
+}
+
+.service-block {
+  margin-bottom: 40px;
+}
+
+.services-video {
+  display: flex;
+  height: 80vh;
+}
+
+.video-wrapper {
+  width: 60%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  width: 40%;
+  padding: 60px;
+  background: #1F4045;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-cta {
+  padding: 80px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services-video {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .video-wrapper,
+  .video-info {
+    width: 100%;
+  }
+}
+/* ===== PREMIUM SERVICES LAYOUT ===== */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 60px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.service-img {
+  width: 50%;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.service-img img:hover {
+  transform: scale(1.03);
+}
+
+/* TEXT */
+.service-text {
+  width: 50%;
+}
+
+.service-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.service-highlight {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #D0AE8A;
+}
+
+.service-text ul {
+  margin-bottom: 20px;
+}
+
+.service-text li {
+  margin-bottom: 8px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #D0AE8A;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-row {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .service-img,
+  .service-text {
+    width: 100%;
+  }
+
+  .service-text {
+    text-align: center;
+  }
+}
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 100px 60px;
+  background: #EDE5D3;
+  text-align: center;
+}
+
+.reviews-header h2 {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.reviews-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.review-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.review-card h4 {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .reviews-grid {
+    flex-direction: column;
+  }
+}
+/* ===== SOCIAL ICONS ===== */
+.footer-socials {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: #EDE5D3;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER = PREMIUM EFFECT */
+.footer-socials a:hover {
+  background: #D0AE8A;
+  color: #1F4045;
+  transform: translateY(-3px);
+}
+/* ===== FOOTER SOCIALS ===== */
+.footer-socials {
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #EDE5D3;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.footer-socials a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #D0AE8A;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover::after {
+  width: 100%;
 }
