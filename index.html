@@ -45,6 +45,70 @@
 
 <body>
 
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Le Grant Tours & Transfers",
+      "url": "https://www.legrant-tours.co.za",
+      "logo": "https://www.legrant-tours.co.za/logo.png",
+      "description": "Luxury chauffeur services, V-Class transfers, airport pickups, corporate travel, and private events across Cape Town and South Africa.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cape Town",
+        "addressCountry": "South Africa"
+      },
+      "areaServed": ["South Africa", "Cape Town", "Sea point", "Camps bay","Hermanus"],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61576402285973",
+        "https://twitter.com/legranttours",
+        "https://www.linkedin.com/company/legrant-tours",
+        "https://www.instagram.com/legrant_tours"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Luxury V-Class Transfers",
+      "provider": {"@type":"LocalBusiness","name":"Le Grant Tours & Transfers"},
+      "description": "Tailored V-Class transfers for airport pickups, city travel, and corporate journeys with comfort and prestige."
+    },
+    {
+      "@type": "Service",
+      "name": "Airport Transfers",
+      "provider": {"@type":"LocalBusiness","name":"Le Grant Tours & Transfers"},
+      "description": "Seamless airport pick-ups and drop-offs with real-time flight tracking and professional chauffeur services."
+    },
+    {
+      "@type": "Service",
+      "name": "Corporate Travel",
+      "provider": {"@type":"LocalBusiness","name":"Le Grant Tours & Transfers"},
+      "description": "Executive transport for meetings, events, and VIP business travel across South Africa."
+    },
+    {
+      "@type": "Service",
+      "name": "Private Events",
+      "provider": {"@type":"LocalBusiness","name":"Le Grant Tours & Transfers"},
+      "description": "Arrive in elegance for weddings, celebrations, and exclusive gatherings with luxury chauffeur services."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What services does Le Grant Tours offer?","acceptedAnswer":{"@type":"Answer","text":"We offer luxury V-Class transfers, airport pickups, corporate travel, and private event chauffeur services."}},
+        {"@type":"Question","name":"Do you provide airport pick-up services?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide seamless airport pick-up and drop-off services with real-time flight tracking."}},
+        {"@type":"Question","name":"Can I book for corporate events?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We cater to executive travel, business meetings, and VIP events."}}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.legrant-tours.co.za/"},
+        {"@type": "ListItem","position": 2,"name": "Services","item": "https://www.legrant-tours.co.za/services.html"}
+      ]
+    }
+  ]
+}
+
 <!-- PAGE TRANSITION -->
 <div class="page-transition"></div>
 
