@@ -67,7 +67,7 @@ Drop-off: ${data.dropoff}
 Date: ${data.date}
 Car: ${data.car}`;
 
-    let phone = "278XXXXXXXXX"; // PUT YOUR NUMBER
+    let phone = "27796220357"; // PUT YOUR NUMBER
 
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
 
