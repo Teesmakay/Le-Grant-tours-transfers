@@ -80,7 +80,7 @@ html {
 /* ===== HERO ===== */
 .hero {
   height: 100vh;
-  background: url('car2.jpg') center/cover no-repeat;
+  background: url('car2.png') center/cover no-repeat;
   position: relative;
 }
 
@@ -865,7 +865,7 @@ section {
 
 .services-hero {
   height: 50vh;
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('hero.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
