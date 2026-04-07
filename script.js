@@ -115,7 +115,7 @@ const fleet = [
         passengers: "7",
         luggage: "6",
         wifi: "Free",
-        img: "car2.jpg"
+        img: "car2.png"
     },
     {
         name: "Mercedes-Benz S-Class",
