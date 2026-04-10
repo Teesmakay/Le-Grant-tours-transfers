@@ -300,84 +300,117 @@
 
 </section>
   
-  <!-- CONTACT -->
-  <section class="contact-section">
-    <div class="contact-container">
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-container">
 
-      <div class="contact-info">
-        <h2>Book Your Experience</h2>
-        <p>
-          Whether it's an airport transfer, a corporate event, or a special occasion —
-          our team is ready to curate the perfect journey.
-        </p>
+    <div class="contact-info">
+      <h2>Book Your Experience</h2>
+      <p>
+        Whether it's an airport transfer, a corporate event, or a special occasion —
+        our team is ready to curate the perfect journey.
+      </p>
 
-        <p><strong>Call Us</strong><br>+27 79 622 0357</p>
-        <p><strong>Email</strong><br>reservations@legrant-tours.co.za</p>
-        <p><strong>Based In</strong><br>Available Cape Town</p>
-      </div>
+      <p><strong>Call Us</strong><br>+27 79 622 0357</p>
+      <p><strong>Email</strong><br>reservations@legrant-tours.co.za</p>
+      <p><strong>Based In</strong><br>Available Cape Town</p>
+    </div>
 
-      <div class="contact-form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email Address">
-        <textarea placeholder="Tell Us About Your Journey"></textarea>
-        <button>Request a Quote</button>
-      </div>
+    <div class="contact-form">
+
+      <!-- ✅ FORM ADDED (NO DESIGN CHANGE) -->
+      <form id="whatsapp-form">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" placeholder="Tell Us About Your Journey" required></textarea>
+
+        <button type="submit">Request a Quote</button>
+
+      </form>
 
     </div>
-  </section>
 
-  <section class="locations">
+  </div>
+</section>
+
+<section class="locations">
 <h2>Areas We Serve</h2>
 <p>
 We provide luxury chauffeur services across Cape Town including Camps Bay, Clifton, Sea Point, Green Point, Constantia, Stellenbosch, Cape Winelands and surrounding areas.
 </p>
 </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+<!-- FOOTER -->
+<footer class="footer">
 
-    <div class="footer-top">
-      <div>
-        <h2>LE GRANT</h2>
-        <p>Luxury beyond transport</p>
-      </div>
+  <div class="footer-top">
+    <div>
+      <h2>LE GRANT</h2>
+      <p>Luxury beyond transport</p>
+    </div>
 
-      <a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+    <a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-      <div class="footer-links">
-  <a href="index.html">Home</a>
-  <a href="index.html#fleet">Fleet</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="booking.html">Booking</a>
-</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#fleet">Fleet</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="booking.html">Booking</a>
+    </div>
 
-<div class="footer-socials">
+    <div class="footer-socials">
 
-  <a href="https://instagram.com/legrant_tours
-" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
+      <!-- ✅ FIXED INSTAGRAM LINK -->
+      <a href="https://instagram.com/legrant_tours" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
 
-  <a href="https://facebook.com/profile.php?id=61576402285973" target="_blank">
-    <i class="fab fa-facebook-f"></i>
-  </a>
+      <a href="https://facebook.com/profile.php?id=61576402285973" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-  <a href="https://wa.me/27796220357" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+      <a href="https://wa.me/27796220357" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
 
-</div>
+    </div>
+
     <p class="copyright">
       © 2026 Le Grant Tours & Transfers. All rights reserved.
     </p>
-  </footer>
 
-  
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<!-- ✅ WHATSAPP FORM SCRIPT -->
+<script>
+document.getElementById("whatsapp-form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  let phone = "27796220357";
+
+  let text = `Hello Le Grant Tours & Transfers,%0A%0A
+I would like to request a booking:%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Details: ${message}%0A%0A
+Service: Luxury Chauffeur Booking in Cape Town`;
+
+  let url = `https://wa.me/${phone}?text=${text}`;
+
+  window.open(url, '_blank');
+});
+</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
