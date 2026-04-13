@@ -183,3 +183,44 @@ setInterval(nextCar, 5000);
 
 // INIT
 updateFleet();
+document.querySelectorAll(".slider").forEach(slider => {
+
+let img = slider.querySelector("img");
+let car = slider.dataset.car;
+let index = 0;
+
+let images = {
+"V-Class": ["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
+"S-Class": ["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
+"E-Class": ["eclass1.jpg","eclass2.jpg","eclass3.jpg"],
+"C-Class": ["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
+}[car];
+
+function changeImage(newIndex){
+img.style.opacity = 0;   // fade out
+
+setTimeout(() => {
+img.src = images[newIndex];
+img.style.opacity = 1; // fade in
+}, 300);
+}
+
+// NEXT
+slider.querySelector(".next").onclick = () => {
+index = (index + 1) % images.length;
+changeImage(index);
+};
+
+// PREV
+slider.querySelector(".prev").onclick = () => {
+index = (index - 1 + images.length) % images.length;
+changeImage(index);
+};
+
+// AUTO SLIDE
+setInterval(() => {
+index = (index + 1) % images.length;
+changeImage(index);
+}, 5000);
+
+});
