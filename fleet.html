@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luxury Fleet Cape Town | Mercedes Chauffeur Vehicles | Le Grant</title>
+<title>Luxury Fleet Cape Town | Le Grant</title>
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -12,14 +12,7 @@
 
 <style>
 
-/* ===== THEME ===== */
-body{
-background:#f9f9f9;
-font-family:Arial, sans-serif;
-margin:0;
-}
-
-/* HERO */
+/* ===== FLEET HERO ===== */
 .fleet-hero{
 height:60vh;
 background:url('car2.png') center/cover no-repeat;
@@ -28,30 +21,42 @@ align-items:center;
 justify-content:center;
 color:white;
 text-align:center;
+position:relative;
 }
+
+.fleet-hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(31,64,69,0.6);
+}
+
 .fleet-hero h1{
 font-size:48px;
+z-index:1;
 }
 
-/* SECTION */
+/* ===== PAGE WRAPPER ===== */
 .fleet-page{
-padding:80px 10%;
+padding:100px 60px;
+background:#EDE5D3;
 }
 
-/* ROW */
+/* ===== FLEET CARD ===== */
 .fleet-row{
 display:flex;
-flex-wrap:wrap;
-gap:50px;
-margin-bottom:100px;
 align-items:center;
+justify-content:space-between;
+gap:60px;
+margin-bottom:100px;
+flex-wrap:wrap;
 }
 
 .fleet-row.reverse{
 flex-direction:row-reverse;
 }
 
-/* SLIDER */
+/* ===== SLIDER ===== */
 .slider{
 position:relative;
 width:100%;
@@ -61,46 +66,52 @@ max-width:500px;
 .slider img{
 width:100%;
 border-radius:20px;
-transition:0.5s;
 }
 
-/* GOLD BUTTONS (FIXED) */
+/* arrows */
 .slider button{
 position:absolute;
 top:50%;
 transform:translateY(-50%);
-background:rgba(255,215,0,0.9);
-color:black;
+background:#D0AE8A;
+color:#1F4045;
 border:none;
-padding:12px;
+padding:10px 14px;
 cursor:pointer;
 border-radius:50%;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
 transition:0.3s;
 }
 
 .slider button:hover{
-background:#d4af37;
-transform:translateY(-50%) scale(1.1);
+opacity:0.8;
 }
 
 .prev{left:10px;}
 .next{right:10px;}
 
-/* TEXT */
+/* ===== TEXT ===== */
 .fleet-text{
 max-width:500px;
 }
 
 .fleet-text h2{
-font-size:30px;
+font-size:32px;
 margin-bottom:10px;
+color:#1F4045;
 }
 
+.fleet-text p{
+color:#1F4045;
+opacity:0.85;
+margin-bottom:15px;
+}
+
+/* TAGS */
 .tags span{
-background:#eee;
+background:#1F4045;
+color:white;
 padding:6px 12px;
-margin-right:10px;
+margin-right:8px;
 border-radius:20px;
 font-size:12px;
 }
@@ -122,10 +133,12 @@ border:none;
 border-radius:8px;
 cursor:pointer;
 margin-right:10px;
+font-weight:bold;
 }
 
 .book{
-background:gold;
+background:#D0AE8A;
+color:#1F4045;
 }
 
 .whatsapp{
@@ -133,45 +146,10 @@ background:#25D366;
 color:white;
 }
 
-/* FOOTER */
-.footer{
-background:#111;
-color:#fff;
-padding:40px 10%;
-text-align:center;
-}
-
-.footer-top{
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
-}
-
-.footer-links a{
-color:#fff;
-margin:0 10px;
-text-decoration:none;
-}
-
-.footer-socials a{
-color:#fff;
-margin:0 10px;
-font-size:18px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#fff;
-padding:15px;
-border-radius:50%;
-font-size:20px;
-z-index:999;
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+.fleet-page{padding:60px 20px;}
+.fleet-hero h1{font-size:30px;}
 }
 
 </style>
@@ -215,11 +193,7 @@ z-index:999;
 <div class="fleet-text">
 <h2>Mercedes-Benz V-Class</h2>
 <p>Luxury group travel, airport transfers and private tours.</p>
-
-<div class="tags">
-<span>Airport</span><span>Tours</span><span>Events</span>
-</div>
-
+<div class="tags"><span>Airport</span><span>Tours</span><span>Events</span></div>
 <div class="status" id="status-v"></div>
 
 <div class="actions">
@@ -240,11 +214,7 @@ z-index:999;
 <div class="fleet-text">
 <h2>Mercedes-Benz S-Class</h2>
 <p>VIP luxury and executive transport.</p>
-
-<div class="tags">
-<span>VIP</span><span>Corporate</span>
-</div>
-
+<div class="tags"><span>VIP</span><span>Corporate</span></div>
 <div class="status" id="status-s"></div>
 
 <div class="actions">
@@ -254,7 +224,118 @@ z-index:999;
 </div>
 </div>
 
+<!-- E CLASS -->
+<div class="fleet-row">
+<div class="slider" data-car="E-Class">
+<img src="eclass1.jpg">
+<button class="prev">‹</button>
+<button class="next">›</button>
+</div>
+
+<div class="fleet-text">
+<h2>Mercedes-Benz E-Class</h2>
+<p>Elegant executive travel and business transfers.</p>
+<div class="tags"><span>Business</span><span>Executive</span></div>
+<div class="status" id="status-e"></div>
+
+<div class="actions">
+<a href="booking.html"><button class="book">Book Now</button></a>
+<button class="whatsapp" onclick="bookCar('E-Class')">WhatsApp</button>
+</div>
+</div>
+</div>
+
+<!-- C CLASS -->
+<div class="fleet-row reverse">
+<div class="slider" data-car="C-Class">
+<img src="cclass1.jpg">
+<button class="prev">‹</button>
+<button class="next">›</button>
+</div>
+
+<div class="fleet-text">
+<h2>Mercedes-Benz C-Class</h2>
+<p>Stylish, comfortable city and airport transfers.</p>
+<div class="tags"><span>City</span><span>Airport</span></div>
+<div class="status" id="status-c"></div>
+
+<div class="actions">
+<a href="booking.html"><button class="book">Book Now</button></a>
+<button class="whatsapp" onclick="bookCar('C-Class')">WhatsApp</button>
+</div>
+</div>
+</div>
+
 </section>
+
+
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* WHATSAPP */
+function bookCar(car){
+let phone="27796220357";
+let msg=`Hello, I want to book a ${car} in Cape Town`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+
+/* STATUS */
+function randomStatus(el){
+let num=Math.floor(Math.random()*3)+1;
+
+if(num===1){
+el.innerText="Available Today";
+el.className="status available";
+}
+else if(num===2){
+el.innerText="Limited Availability";
+el.className="status limited";
+}
+else{
+el.innerText="Fully Booked Soon";
+el.className="status busy";
+}
+}
+
+randomStatus(document.getElementById("status-v"));
+randomStatus(document.getElementById("status-s"));
+randomStatus(document.getElementById("status-e"));
+randomStatus(document.getElementById("status-c"));
+
+/* SLIDERS */
+document.querySelectorAll(".slider").forEach(slider=>{
+
+let img=slider.querySelector("img");
+let car=slider.dataset.car;
+let index=0;
+
+let images={
+"V-Class":["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
+"S-Class":["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
+"E-Class":["eclass1.jpg","eclass2.jpg","eclass3.jpg"],
+"C-Class":["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
+}[car];
+
+slider.querySelector(".next").onclick=()=>{
+index=(index+1)%images.length;
+img.src=images[index];
+};
+
+slider.querySelector(".prev").onclick=()=>{
+index=(index-1+images.length)%images.length;
+img.src=images[index];
+};
+
+});
+
+</script>
+
+<script src="script.js"></script>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -284,75 +365,3 @@ z-index:999;
 <p>© 2026 Le Grant Tours & Transfers. All rights reserved.</p>
 
 </footer>
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- JS -->
-<script>
-
-/* WHATSAPP */
-function bookCar(car){
-let phone = "27796220357";
-let msg = `Hello, I want to book a ${car} in Cape Town`;
-window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
-}
-
-/* STATUS SYSTEM */
-function randomStatus(el){
-let num = Math.floor(Math.random()*3)+1;
-
-if(num === 1){
-el.innerText = "Available Today";
-el.className = "status available";
-}
-else if(num === 2){
-el.innerText = "Only 2 left today";
-el.className = "status limited";
-}
-else{
-el.innerText = "Only 1 left today";
-el.className = "status busy";
-}
-}
-
-randomStatus(document.getElementById("status-v"));
-randomStatus(document.getElementById("status-s"));
-
-/* SLIDER PER CAR */
-document.querySelectorAll(".slider").forEach(slider=>{
-
-let img = slider.querySelector("img");
-let car = slider.dataset.car;
-
-let images = [];
-
-if(car === "V-Class"){
-images = ["vclass1.jpg","vclass2.jpg","vclass3.jpg"];
-}
-else if(car === "S-Class"){
-images = ["sclass1.jpg","sclass2.jpg","sclass3.jpg"];
-}
-
-let index = 0;
-
-slider.querySelector(".next").onclick = ()=>{
-index = (index+1)%images.length;
-img.src = images[index];
-};
-
-slider.querySelector(".prev").onclick = ()=>{
-index = (index-1+images.length)%images.length;
-img.src = images[index];
-};
-
-});
-
-</script>
-
-<script src="script.js"></script>
-
-</body>
-</html>
