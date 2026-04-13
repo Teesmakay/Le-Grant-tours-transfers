@@ -181,24 +181,21 @@ text-decoration:underline;
 </head>
 
 <!-- NAV -->
-<header class="nav">
-  <div class="logo-container">
-    <img src="logo.jpg" alt="LE GRANT Logo">
-    <span class="logo-text">LE GRANT</span>
-  </div>
+  <header class="nav">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo">
+      <span class="logo-text">LE GRANT</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
 
-  <div class="hamburger" onclick="toggleMenu()">
-    ☰
+  <!-- MENU -->
+  <div class="menu-overlay" id="menuOverlay">
+    <a href="index.html">Home</a>
+    <a href="index.html">services</a>
+    <a href="about.html">About</a>
+    <a href="booking.html">Booking</a>
   </div>
-</header>
-
-<!-- MENU -->
-<nav class="menu-overlay" id="menuOverlay">
-  <a href="index.html">Home</a>
-  <a href="fleet.html">Fleet</a>
-  <a href="services.html">Services</a>
-  <a href="booking.html">Booking</a>
-</nav>
 
 <!-- HERO -->
 <section class="fleet-hero">
