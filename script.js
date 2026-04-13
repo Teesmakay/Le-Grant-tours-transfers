@@ -126,7 +126,7 @@ const fleet = [
         img: "car1.jpg"
     },
     {
-        name: "Mercedes-Benz E-Class",
+        name: "Mercedes-Benz C-Class",
         desc: "Perfect balance of luxury and efficiency for business travel.",
         passengers: "4",
         luggage: "2",
