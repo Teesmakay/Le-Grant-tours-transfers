@@ -224,26 +224,6 @@ color:white;
 </div>
 </div>
 
-<!-- E CLASS -->
-<div class="fleet-row">
-<div class="slider" data-car="E-Class">
-<img src="eclass1.jpg">
-<button class="prev">‹</button>
-<button class="next">›</button>
-</div>
-
-<div class="fleet-text">
-<h2>Mercedes-Benz E-Class</h2>
-<p>Elegant executive travel and business transfers.</p>
-<div class="tags"><span>Business</span><span>Executive</span></div>
-<div class="status" id="status-e"></div>
-
-<div class="actions">
-<a href="booking.html"><button class="book">Book Now</button></a>
-<button class="whatsapp" onclick="bookCar('E-Class')">WhatsApp</button>
-</div>
-</div>
-</div>
 
 <!-- C CLASS -->
 <div class="fleet-row reverse">
@@ -304,7 +284,6 @@ el.className="status busy";
 
 randomStatus(document.getElementById("status-v"));
 randomStatus(document.getElementById("status-s"));
-randomStatus(document.getElementById("status-e"));
 randomStatus(document.getElementById("status-c"));
 
 /* SLIDERS */
@@ -317,7 +296,6 @@ let index=0;
 let images={
 "V-Class":["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
 "S-Class":["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
-"E-Class":["eclass1.jpg","eclass2.jpg","eclass3.jpg"],
 "C-Class":["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
 }[car];
 
