@@ -1126,3 +1126,19 @@ section {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+.fleet-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#D0AE8A;
+color:#1F4045;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:0.3s ease;
+}
+
+.fleet-btn:hover{
+opacity:0.85;
+transform:translateY(-2px);
+}
