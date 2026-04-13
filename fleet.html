@@ -43,12 +43,12 @@ padding:100px 60px;
 background:#EDE5D3;
 }
 
-/* ROW */
+/* ROW FIXED */
 .fleet-row{
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:60px;
+justify-content:center;
+gap:30px;
 margin-bottom:100px;
 flex-wrap:wrap;
 transition:0.4s;
@@ -62,28 +62,53 @@ flex-direction:row-reverse;
 transform:scale(1.03);
 }
 
-/* SLIDER */
+/* SLIDER FIXED */
 .slider{
-width:100%;
-max-width:500px;
+position:relative;
+flex:1;
+min-width:380px;
+max-width:650px;
 }
 .slider img{
 width:100%;
 border-radius:20px;
+transition:0.4s ease;
 }
 
-/* TEXT */
+/* ARROWS */
+.slider button{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(31,64,69,0.8);
+color:white;
+border:none;
+padding:10px 14px;
+cursor:pointer;
+border-radius:50%;
+transition:0.3s;
+}
+.slider button:hover{
+background:#D0AE8A;
+color:#1F4045;
+}
+.prev{left:10px;}
+.next{right:10px;}
+
+/* TEXT FIXED */
 .fleet-text{
-max-width:500px;
+flex:1;
+min-width:320px;
+max-width:520px;
 }
 .fleet-text h2{
 font-size:32px;
 color:#1F4045;
 }
 .fleet-desc{
-margin:15px 0;
+margin:10px 0;
 color:#1F4045;
-line-height:1.6;
+line-height:1.5;
 }
 
 /* SPECS */
@@ -135,6 +160,17 @@ background:#25D366;
 color:white;
 }
 
+/* HOVER PREMIUM */
+.slider img:hover{
+transform:scale(1.03);
+}
+
+/* FOOTER */
+footer a:hover{
+opacity:1 !important;
+text-decoration:underline;
+}
+
 /* MOBILE */
 @media(max-width:768px){
 .fleet-page{padding:60px 20px;}
@@ -146,7 +182,6 @@ color:white;
 
 <body>
 
-<!-- HERO -->
 <section class="fleet-hero">
 <h1>Our Luxury Fleet</h1>
 </section>
@@ -157,15 +192,13 @@ color:white;
 <div class="fleet-row active-fleet">
 <div class="slider" data-car="V-Class">
 <img src="vclass1.jpg">
+<button class="prev"><i class="fa fa-chevron-left"></i></button>
+<button class="next"><i class="fa fa-chevron-right"></i></button>
 </div>
 
 <div class="fleet-text">
 <h2>Mercedes-Benz V-Class Chauffeur</h2>
-
-<p class="fleet-desc">
-Luxury group transport in Cape Town for airport transfers, private tours, events and business travel.
-Perfect for families, executives and VIP groups.
-</p>
+<p class="fleet-desc">Luxury group transport in Cape Town for airport transfers, private tours, events and business travel.</p>
 
 <div class="specs">
 <span><i class="fa fa-users"></i> 6–7 Passengers</span>
@@ -192,14 +225,13 @@ Perfect for families, executives and VIP groups.
 <div class="fleet-row reverse">
 <div class="slider" data-car="S-Class">
 <img src="sclass1.jpg">
+<button class="prev"><i class="fa fa-chevron-left"></i></button>
+<button class="next"><i class="fa fa-chevron-right"></i></button>
 </div>
 
 <div class="fleet-text">
 <h2>Mercedes-Benz S-Class VIP</h2>
-
-<p class="fleet-desc">
-Premium chauffeur service in Cape Town for executives, VIP airport transfers and luxury experiences.
-</p>
+<p class="fleet-desc">Premium chauffeur service in Cape Town for executives and VIP transfers.</p>
 
 <div class="specs">
 <span><i class="fa fa-users"></i> 2–3 Passengers</span>
@@ -225,14 +257,13 @@ Premium chauffeur service in Cape Town for executives, VIP airport transfers and
 <div class="fleet-row">
 <div class="slider" data-car="C-Class">
 <img src="cclass1.jpg">
+<button class="prev"><i class="fa fa-chevron-left"></i></button>
+<button class="next"><i class="fa fa-chevron-right"></i></button>
 </div>
 
 <div class="fleet-text">
 <h2>Mercedes-Benz C-Class Comfort</h2>
-
-<p class="fleet-desc">
-Comfortable and stylish transport in Cape Town for city travel, airport pickups and daily chauffeur services.
-</p>
+<p class="fleet-desc">Comfortable transport in Cape Town for city travel and airport pickups.</p>
 
 <div class="specs">
 <span><i class="fa fa-users"></i> 3–4 Passengers</span>
@@ -256,78 +287,78 @@ Comfortable and stylish transport in Cape Town for city travel, airport pickups 
 
 </section>
 
-<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/27796220357" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
-<script>
 
-/* WHATSAPP */
+<script>
 function bookCar(car){
 let phone="27796220357";
 let msg=`Hello, I want to book a ${car} in Cape Town`;
 window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
 }
 
-/* SLIDER SYSTEM */
-const fleetRows = document.querySelectorAll(".fleet-row");
+const fleetRows=document.querySelectorAll(".fleet-row");
 
-const sliders = {
+const sliders={
 "V-Class":["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
 "S-Class":["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
 "C-Class":["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
 };
 
 fleetRows.forEach(row=>{
-let slider = row.querySelector(".slider");
-let img = slider.querySelector("img");
-let car = slider.dataset.car;
-let index = 0;
+let slider=row.querySelector(".slider");
+let img=slider.querySelector("img");
+let car=slider.dataset.car;
+let index=0;
 
 setInterval(()=>{
 if(row.classList.contains("active-fleet")){
-index = (index + 1) % sliders[car].length;
-img.src = sliders[car][index];
+index=(index+1)%sliders[car].length;
+img.src=sliders[car][index];
 }
 },3000);
+
+slider.querySelector(".next").onclick=()=>{
+index=(index+1)%sliders[car].length;
+img.src=sliders[car][index];
+};
+
+slider.querySelector(".prev").onclick=()=>{
+index=(index-1+sliders[car].length)%sliders[car].length;
+img.src=sliders[car][index];
+};
 });
 
-/* SCROLL ACTIVATION */
-window.addEventListener("scroll", ()=>{
-let middle = window.innerHeight / 2;
-
+window.addEventListener("scroll",()=>{
+let middle=window.innerHeight/2;
 fleetRows.forEach(row=>{
-let rect = row.getBoundingClientRect();
-
-if(rect.top < middle && rect.bottom > middle){
+let rect=row.getBoundingClientRect();
+if(rect.top<middle&&rect.bottom>middle){
 fleetRows.forEach(r=>r.classList.remove("active-fleet"));
 row.classList.add("active-fleet");
 }
 });
 });
 
-/* URGENCY SYSTEM */
 function dynamicStatus(el){
-const states = [
+const states=[
 "Almost Fully Booked Today",
 "Limited Availability – High Demand",
 "Only 2 Slots Left",
 "Peak Season Filling Fast"
 ];
-
-let i = 0;
-
+let i=0;
 setInterval(()=>{
-el.innerText = states[i];
-i = (i+1) % states.length;
+el.innerText=states[i];
+i=(i+1)%states.length;
 },4000);
 }
 
 dynamicStatus(document.getElementById("status-v"));
 dynamicStatus(document.getElementById("status-s"));
 dynamicStatus(document.getElementById("status-c"));
-
 </script>
 
 </body>
