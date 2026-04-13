@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luxury Fleet Cape Town | Le Grant</title>
+<title>Luxury Fleet Cape Town | Le Grant Chauffeur Services</title>
+
+<meta name="description" content="Luxury chauffeur services in Cape Town. Mercedes V-Class, S-Class and C-Class available for airport transfers, private tours, VIP and corporate travel.">
+<meta name="keywords" content="luxury transport Cape Town, chauffeur service Cape Town, airport transfers Cape Town luxury, Mercedes V Class Cape Town, VIP chauffeur Cape Town">
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -12,7 +15,7 @@
 
 <style>
 
-/* ===== FLEET HERO ===== */
+/* HERO */
 .fleet-hero{
 height:60vh;
 background:url('car2.png') center/cover no-repeat;
@@ -23,26 +26,24 @@ color:white;
 text-align:center;
 position:relative;
 }
-
 .fleet-hero::after{
 content:"";
 position:absolute;
 inset:0;
 background:rgba(31,64,69,0.6);
 }
-
 .fleet-hero h1{
 font-size:48px;
 z-index:1;
 }
 
-/* ===== PAGE WRAPPER ===== */
+/* PAGE */
 .fleet-page{
 padding:100px 60px;
 background:#EDE5D3;
 }
 
-/* ===== FLEET CARD ===== */
+/* ROW */
 .fleet-row{
 display:flex;
 align-items:center;
@@ -50,60 +51,53 @@ justify-content:space-between;
 gap:60px;
 margin-bottom:100px;
 flex-wrap:wrap;
+transition:0.4s;
 }
-
 .fleet-row.reverse{
 flex-direction:row-reverse;
 }
 
-/* ===== SLIDER ===== */
+/* ACTIVE */
+.active-fleet{
+transform:scale(1.03);
+}
+
+/* SLIDER */
 .slider{
-position:relative;
 width:100%;
 max-width:500px;
 }
-
 .slider img{
 width:100%;
 border-radius:20px;
 }
 
-/* arrows */
-.slider button{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:#D0AE8A;
-color:#1F4045;
-border:none;
-padding:10px 14px;
-cursor:pointer;
-border-radius:50%;
-transition:0.3s;
-}
-
-.slider button:hover{
-opacity:0.8;
-}
-
-.prev{left:10px;}
-.next{right:10px;}
-
-/* ===== TEXT ===== */
+/* TEXT */
 .fleet-text{
 max-width:500px;
 }
-
 .fleet-text h2{
 font-size:32px;
-margin-bottom:10px;
 color:#1F4045;
 }
-
-.fleet-text p{
+.fleet-desc{
+margin:15px 0;
 color:#1F4045;
-opacity:0.85;
+line-height:1.6;
+}
+
+/* SPECS */
+.specs{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 margin-bottom:15px;
+}
+.specs span{
+background:#fff;
+padding:8px 12px;
+border-radius:10px;
+font-size:13px;
 }
 
 /* TAGS */
@@ -120,11 +114,8 @@ font-size:12px;
 .status{
 margin:15px 0;
 font-weight:bold;
+color:#d97706;
 }
-
-.available{color:green;}
-.limited{color:orange;}
-.busy{color:red;}
 
 /* BUTTONS */
 .actions button{
@@ -135,18 +126,16 @@ cursor:pointer;
 margin-right:10px;
 font-weight:bold;
 }
-
 .book{
 background:#D0AE8A;
 color:#1F4045;
 }
-
 .whatsapp{
 background:#25D366;
 color:white;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:768px){
 .fleet-page{padding:60px 20px;}
 .fleet-hero h1{font-size:30px;}
@@ -157,47 +146,43 @@ color:white;
 
 <body>
 
-<!-- NAV -->
-<header class="nav">
-<div class="logo-container">
-<img src="logo.jpg">
-<span class="logo-text">LE GRANT</span>
-</div>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-</header>
-
-<!-- MENU -->
-<div class="menu-overlay" id="menuOverlay">
-<a href="index.html">Home</a>
-<a href="fleet.html">Fleet</a>
-<a href="services.html">Services</a>
-<a href="booking.html">Booking</a>
-</div>
-
 <!-- HERO -->
 <section class="fleet-hero">
 <h1>Our Luxury Fleet</h1>
 </section>
 
-<!-- FLEET -->
 <section class="fleet-page">
 
 <!-- V CLASS -->
-<div class="fleet-row">
+<div class="fleet-row active-fleet">
 <div class="slider" data-car="V-Class">
 <img src="vclass1.jpg">
-<button class="prev">‹</button>
-<button class="next">›</button>
 </div>
 
 <div class="fleet-text">
-<h2>Mercedes-Benz V-Class</h2>
-<p>Luxury group travel, airport transfers and private tours.</p>
-<div class="tags"><span>Airport</span><span>Tours</span><span>Events</span></div>
+<h2>Mercedes-Benz V-Class Chauffeur</h2>
+
+<p class="fleet-desc">
+Luxury group transport in Cape Town for airport transfers, private tours, events and business travel.
+Perfect for families, executives and VIP groups.
+</p>
+
+<div class="specs">
+<span><i class="fa fa-users"></i> 6–7 Passengers</span>
+<span><i class="fa fa-suitcase"></i> 6 Luggage</span>
+<span>Executive Class</span>
+</div>
+
+<div class="tags">
+<span>Cape Town Tours</span>
+<span>Airport Transfers</span>
+<span>Events</span>
+</div>
+
 <div class="status" id="status-v"></div>
 
 <div class="actions">
-<a href="booking.html"><button class="book">Book Now</button></a>
+<a href="booking.html"><button class="book">Reserve Now</button></a>
 <button class="whatsapp" onclick="bookCar('V-Class')">WhatsApp</button>
 </div>
 </div>
@@ -207,40 +192,63 @@ color:white;
 <div class="fleet-row reverse">
 <div class="slider" data-car="S-Class">
 <img src="sclass1.jpg">
-<button class="prev">‹</button>
-<button class="next">›</button>
 </div>
 
 <div class="fleet-text">
-<h2>Mercedes-Benz S-Class</h2>
-<p>VIP luxury and executive transport.</p>
-<div class="tags"><span>VIP</span><span>Corporate</span></div>
+<h2>Mercedes-Benz S-Class VIP</h2>
+
+<p class="fleet-desc">
+Premium chauffeur service in Cape Town for executives, VIP airport transfers and luxury experiences.
+</p>
+
+<div class="specs">
+<span><i class="fa fa-users"></i> 2–3 Passengers</span>
+<span><i class="fa fa-suitcase"></i> 2 Luggage</span>
+<span>First Class</span>
+</div>
+
+<div class="tags">
+<span>VIP Transfers</span>
+<span>Corporate</span>
+</div>
+
 <div class="status" id="status-s"></div>
 
 <div class="actions">
-<a href="booking.html"><button class="book">Book Now</button></a>
+<a href="booking.html"><button class="book">Reserve Now</button></a>
 <button class="whatsapp" onclick="bookCar('S-Class')">WhatsApp</button>
 </div>
 </div>
 </div>
 
-
 <!-- C CLASS -->
-<div class="fleet-row reverse">
+<div class="fleet-row">
 <div class="slider" data-car="C-Class">
 <img src="cclass1.jpg">
-<button class="prev">‹</button>
-<button class="next">›</button>
 </div>
 
 <div class="fleet-text">
-<h2>Mercedes-Benz C-Class</h2>
-<p>Stylish, comfortable city and airport transfers.</p>
-<div class="tags"><span>City</span><span>Airport</span></div>
+<h2>Mercedes-Benz C-Class Comfort</h2>
+
+<p class="fleet-desc">
+Comfortable and stylish transport in Cape Town for city travel, airport pickups and daily chauffeur services.
+</p>
+
+<div class="specs">
+<span><i class="fa fa-users"></i> 3–4 Passengers</span>
+<span><i class="fa fa-suitcase"></i> 3 Luggage</span>
+<span>Comfort Class</span>
+</div>
+
+<div class="tags">
+<span>City Transfers</span>
+<span>Airport</span>
+</div>
+
 <div class="status" id="status-c"></div>
 
 <div class="actions">
-<a href="booking.html"><button class="book">Book Now</button></a>
+<a href="booking.html"><button class="book">Reserve Now</button></a>
 <button class="whatsapp" onclick="bookCar('C-Class')">WhatsApp</button>
 </div>
 </div>
@@ -248,10 +256,8 @@ color:white;
 
 </section>
 
-
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/27796220357" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -264,56 +270,68 @@ let msg=`Hello, I want to book a ${car} in Cape Town`;
 window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
 }
 
-/* STATUS */
-function randomStatus(el){
-let num=Math.floor(Math.random()*3)+1;
+/* SLIDER SYSTEM */
+const fleetRows = document.querySelectorAll(".fleet-row");
 
-if(num===1){
-el.innerText="Available Today";
-el.className="status available";
-}
-else if(num===2){
-el.innerText="Limited Availability";
-el.className="status limited";
-}
-else{
-el.innerText="Fully Booked Soon";
-el.className="status busy";
-}
-}
-
-randomStatus(document.getElementById("status-v"));
-randomStatus(document.getElementById("status-s"));
-randomStatus(document.getElementById("status-c"));
-
-/* SLIDERS */
-document.querySelectorAll(".slider").forEach(slider=>{
-
-let img=slider.querySelector("img");
-let car=slider.dataset.car;
-let index=0;
-
-let images={
+const sliders = {
 "V-Class":["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
 "S-Class":["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
 "C-Class":["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
-}[car];
-
-slider.querySelector(".next").onclick=()=>{
-index=(index+1)%images.length;
-img.src=images[index];
 };
 
-slider.querySelector(".prev").onclick=()=>{
-index=(index-1+images.length)%images.length;
-img.src=images[index];
-};
+fleetRows.forEach(row=>{
+let slider = row.querySelector(".slider");
+let img = slider.querySelector("img");
+let car = slider.dataset.car;
+let index = 0;
 
+setInterval(()=>{
+if(row.classList.contains("active-fleet")){
+index = (index + 1) % sliders[car].length;
+img.src = sliders[car][index];
+}
+},3000);
 });
+
+/* SCROLL ACTIVATION */
+window.addEventListener("scroll", ()=>{
+let middle = window.innerHeight / 2;
+
+fleetRows.forEach(row=>{
+let rect = row.getBoundingClientRect();
+
+if(rect.top < middle && rect.bottom > middle){
+fleetRows.forEach(r=>r.classList.remove("active-fleet"));
+row.classList.add("active-fleet");
+}
+});
+});
+
+/* URGENCY SYSTEM */
+function dynamicStatus(el){
+const states = [
+"Almost Fully Booked Today",
+"Limited Availability – High Demand",
+"Only 2 Slots Left",
+"Peak Season Filling Fast"
+];
+
+let i = 0;
+
+setInterval(()=>{
+el.innerText = states[i];
+i = (i+1) % states.length;
+},4000);
+}
+
+dynamicStatus(document.getElementById("status-v"));
+dynamicStatus(document.getElementById("status-s"));
+dynamicStatus(document.getElementById("status-c"));
 
 </script>
 
-<script src="script.js"></script>
+</body>
+</html>
 
 <!-- FOOTER -->
 <footer class="footer">
