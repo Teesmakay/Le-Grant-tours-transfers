@@ -224,7 +224,6 @@ changeImage(index);
 }, 5000);
 
 });
-<script>
 const section = document.querySelector('.pilots-section');
 
 const observer = new IntersectionObserver((entries) => {
@@ -235,5 +234,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.3 });
 
-observer.observe(section);
-</script>
+if (section) {
+  observer.observe(section);
+}
