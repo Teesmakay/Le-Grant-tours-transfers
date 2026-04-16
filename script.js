@@ -224,3 +224,16 @@ changeImage(index);
 }, 5000);
 
 });
+<script>
+const section = document.querySelector('.pilots-section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(section);
+</script>
