@@ -2,25 +2,31 @@
 const menuOverlay = document.getElementById("menuOverlay");
 
 function toggleMenu() {
-    const menu = document.getElementById("menuOverlay");
-    menu.classList.toggle("active");
+    if (menuOverlay) {
+        menuOverlay.classList.toggle("active");
+    }
 }
 
-// CLOSE MENU WHEN CLICKING LINK (VERY IMPORTANT)
+// CLOSE MENU WHEN CLICKING LINK
 document.querySelectorAll(".menu-overlay a").forEach(link => {
     link.addEventListener("click", () => {
-        document.getElementById("menuOverlay").classList.remove("active");
+        if (menuOverlay) {
+            menuOverlay.classList.remove("active");
+        }
     });
 });
-// Wait for the page to load
+
+// ===== PAGE TRANSITION =====
 window.addEventListener("load", () => {
     const transition = document.querySelector(".page-transition");
-    
-    // Start fade out after 1 second (matching your CSS animation)
-    setTimeout(() => {
-        transition.style.height = "0%";
-    }, 1000); // matches your 1s animation
+
+    if (transition) {
+        setTimeout(() => {
+            transition.style.height = "0%";
+        }, 1000);
+    }
 });
+
 // ===== BOOKING =====
 function openBooking() {
     const modal = document.getElementById("bookingModal");
@@ -54,12 +60,10 @@ function sendBooking() {
         car: car.value
     };
 
-    // SAVE LEADS
     let leads = JSON.parse(localStorage.getItem("leads")) || [];
     leads.push(data);
     localStorage.setItem("leads", JSON.stringify(leads));
 
-    // WHATSAPP MESSAGE
     let message = `Luxury Booking:
 Name: ${data.name}
 Pickup: ${data.pickup}
@@ -67,12 +71,13 @@ Drop-off: ${data.dropoff}
 Date: ${data.date}
 Car: ${data.car}`;
 
-    let phone = "27796220357"; // PUT YOUR NUMBER
+    let phone = "27796220357";
 
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
 
     alert("Booking Sent!");
 }
+
 // ===== 3D CARD EFFECT =====
 const cards = document.querySelectorAll(".car");
 
@@ -96,16 +101,18 @@ if (cards.length > 0) {
 // ===== FADE-IN ON SCROLL =====
 const faders = document.querySelectorAll(".fade-in");
 
-window.addEventListener("scroll", () => {
-    faders.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
+if (faders.length > 0) {
+    window.addEventListener("scroll", () => {
+        faders.forEach(el => {
+            let position = el.getBoundingClientRect().top;
+            let screenHeight = window.innerHeight;
 
-        if (position < screenHeight - 100) {
-            el.classList.add("show");
-        }
+            if (position < screenHeight - 100) {
+                el.classList.add("show");
+            }
+        });
     });
-});
+}
 
 // ===== FLEET DATA =====
 const fleet = [
@@ -167,6 +174,7 @@ function updateFleet() {
     current.innerText = String(index + 1).padStart(2, '0');
     total.innerText = String(fleet.length).padStart(2, '0');
 }
+
 // ===== CONTROLS =====
 function nextCar() {
     index = (index + 1) % fleet.length;
@@ -178,62 +186,71 @@ function prevCar() {
     updateFleet();
 }
 
-// AUTO SLIDE
-setInterval(nextCar, 5000);
-
-// INIT
-updateFleet();
-document.querySelectorAll(".slider").forEach(slider => {
-
-let img = slider.querySelector("img");
-let car = slider.dataset.car;
-let index = 0;
-
-let images = {
-"V-Class": ["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
-"S-Class": ["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
-"E-Class": ["eclass1.jpg","eclass2.jpg","eclass3.jpg"],
-"C-Class": ["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
-}[car];
-
-function changeImage(newIndex){
-img.style.opacity = 0;   // fade out
-
-setTimeout(() => {
-img.src = images[newIndex];
-img.style.opacity = 1; // fade in
-}, 300);
+// INIT FLEET ONLY IF EXISTS
+if (document.getElementById("carTitle")) {
+    updateFleet();
+    setInterval(nextCar, 5000);
 }
 
-// NEXT
-slider.querySelector(".next").onclick = () => {
-index = (index + 1) % images.length;
-changeImage(index);
-};
+// ===== MULTI IMAGE SLIDERS =====
+document.querySelectorAll(".slider").forEach(slider => {
 
-// PREV
-slider.querySelector(".prev").onclick = () => {
-index = (index - 1 + images.length) % images.length;
-changeImage(index);
-};
+    let img = slider.querySelector("img");
+    let car = slider.dataset.car;
+    let index = 0;
 
-// AUTO SLIDE
-setInterval(() => {
-index = (index + 1) % images.length;
-changeImage(index);
-}, 5000);
+    let images = {
+        "V-Class": ["vclass1.jpg","vclass2.jpg","vclass3.jpg"],
+        "S-Class": ["sclass1.jpg","sclass2.jpg","sclass3.jpg"],
+        "E-Class": ["eclass1.jpg","eclass2.jpg","eclass3.jpg"],
+        "C-Class": ["cclass1.jpg","cclass2.jpg","cclass3.jpg"]
+    }[car];
 
+    if (!images || !img) return;
+
+    function changeImage(newIndex){
+        img.style.opacity = 0;
+
+        setTimeout(() => {
+            img.src = images[newIndex];
+            img.style.opacity = 1;
+        }, 300);
+    }
+
+    const nextBtn = slider.querySelector(".next");
+    const prevBtn = slider.querySelector(".prev");
+
+    if (nextBtn) {
+        nextBtn.onclick = () => {
+            index = (index + 1) % images.length;
+            changeImage(index);
+        };
+    }
+
+    if (prevBtn) {
+        prevBtn.onclick = () => {
+            index = (index - 1 + images.length) % images.length;
+            changeImage(index);
+        };
+    }
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        changeImage(index);
+    }, 5000);
 });
+
+// ===== PILOTS ANIMATION =====
 const section = document.querySelector('.pilots-section');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-  });
-}, { threshold: 0.3 });
-
 if (section) {
-  observer.observe(section);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
 }
