@@ -408,6 +408,7 @@ button:hover {
 .pilots-section {
   padding: 120px 60px;
   background: #EDE5D3;
+  overflow: hidden; /* IMPORTANT for smooth animation */
 }
 
 .pilots-container {
@@ -416,8 +417,14 @@ button:hover {
   gap: 80px;
 }
 
+/* IMAGE SIDE */
 .pilots-image {
-  width: 50%;
+  width: 55%;
+
+  /* Animation start state */
+  transform: translateX(-140px) scale(0.96);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .pilots-image img {
@@ -428,7 +435,13 @@ button:hover {
 
 /* TEXT SIDE */
 .pilots-content {
-  width: 50%;
+  width: 45%;
+
+  /* Animation start state */
+  transform: translateX(140px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-delay: 0.2s; /* slight delay for premium feel */
 }
 
 .pilots-content h2 {
@@ -452,6 +465,11 @@ button:hover {
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+
+  /* subtle fade-up effect */
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
 }
 
 .stat-item i {
@@ -469,6 +487,35 @@ button:hover {
   opacity: 0.7;
 }
 
+/* === ACTIVE STATE (triggered on scroll) === */
+.pilots-section.active .pilots-image {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+.pilots-section.active .pilots-content {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* stagger stats animation */
+.pilots-section.active .stat-item {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.pilots-section.active .stat-item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.pilots-section.active .stat-item:nth-child(2) {
+  transition-delay: 0.5s;
+}
+
+.pilots-section.active .stat-item:nth-child(3) {
+  transition-delay: 0.7s;
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .pilots-container {
@@ -479,6 +526,8 @@ button:hover {
   .pilots-image,
   .pilots-content {
     width: 100%;
+    transform: none !important;
+    opacity: 1 !important;
   }
 
   .pilots-content {
@@ -487,6 +536,8 @@ button:hover {
 
   .stat-item {
     justify-content: center;
+    transform: none;
+    opacity: 1;
   }
 }
 /* ===== CONTACT ===== */
