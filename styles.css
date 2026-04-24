@@ -1329,3 +1329,47 @@ transform:translateY(-2px);
     font-size: 32px;
   }
 }
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(31, 64, 69, 0.95);
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 45px;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-btn {
+  background: #D0AE8A;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #1F4045 !important;
+}
