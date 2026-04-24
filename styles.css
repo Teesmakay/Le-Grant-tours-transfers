@@ -1396,3 +1396,58 @@ img.logo-img {
   align-items: center;
   gap: 10px;
 }
+/* ===== NAV FIX (LOGO BUG FIX) ===== */
+.nav {
+  background: rgba(31, 64, 69, 0.95);
+  padding: 15px 60px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BRAND WRAPPER */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* 🔥 THIS FIXES YOUR PROBLEM */
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* TEXT */
+.brand-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+.brand-sub {
+  color: #D0AE8A;
+  font-size: 10px;
+  display: block;
+}
+
+/* NAV LINKS */
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+}
+
+.nav-btn {
+  background: #D0AE8A;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #1F4045;
+}
