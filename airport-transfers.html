@@ -6,16 +6,11 @@
 
 <title>Airport Transfers Cape Town | Luxury Chauffeur | Le Grant Tours</title>
 
-<meta name="description" content="Luxury airport transfers in Cape Town with professional Mercedes-Benz chauffeurs. Meet & greet, flight tracking, and 24/7 private transfers from Cape Town International Airport.">
-<meta name="keywords" content="Cape Town airport transfers, luxury chauffeur Cape Town, Mercedes airport transfer, private airport pickup Cape Town">
+<meta name="description" content="Luxury airport transfers in Cape Town with professional chauffeurs and Mercedes-Benz vehicles. Private, reliable and available 24/7. Book your transfer today.">
 
 <link rel="canonical" href="https://www.legrant-tours.co.za/airport-transfers.html">
 
-<!-- FAVICON -->
 <link rel="icon" type="image/jpeg" href="logo.jpg">
-
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -24,18 +19,18 @@
 ===================== */
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: Arial, sans-serif;
   background: #EDE5D3;
   color: #1F4045;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; }
 
 /* =====================
    HEADER
 ===================== */
 .nav {
-  background: rgba(31, 64, 69, 0.95);
+  background: #1F4045;
   padding: 12px 40px;
   position: sticky;
   top: 0;
@@ -55,26 +50,22 @@ a { text-decoration: none; color: inherit; }
   gap: 10px;
 }
 
-/* SMALL LOGO FIX */
 .logo-img {
   width: 38px;
   height: 38px;
-  border-radius: 6px;
   object-fit: cover;
+  border-radius: 6px;
 }
 
-/* TEXT FIX */
 .brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
 }
 
 .brand-name {
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .brand-sub {
@@ -87,110 +78,127 @@ a { text-decoration: none; color: inherit; }
   color: white;
   margin-left: 18px;
   font-size: 14px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #D0AE8A;
 }
 
 .nav-btn {
   background: #D0AE8A;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border-radius: 5px;
   color: #1F4045 !important;
 }
 
 /* =====================
    HERO
 ===================== */
-.hero {
-  height: 75vh;
+.service-hero {
+  height: 70vh;
   background: url('vclass1.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.hero-overlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(31, 64, 69, 0.65);
+  background: rgba(0,0,0,0.55);
 }
 
-.hero-content {
+.service-hero-text {
   position: relative;
   margin-left: 8%;
-  max-width: 650px;
   color: white;
+  max-width: 600px;
 }
 
-.hero-content h1 {
-  font-size: 54px;
-  margin-bottom: 10px;
+.service-hero-text h1 {
+  font-size: 48px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  opacity: 0.9;
+button {
+  background: #D0AE8A;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* =====================
-   SECTIONS
+   INTRO
 ===================== */
-.section {
-  padding: 90px 40px;
+.service-intro {
+  padding: 80px 40px;
+  text-align: center;
 }
 
-.container {
-  max-width: 1000px;
+.service-intro p {
+  max-width: 800px;
   margin: auto;
+  line-height: 1.6;
 }
 
 /* =====================
-   FEATURES (SEO TEXT FIXED)
+   FEATURES (FIXED SEO VERSION)
 ===================== */
-.features {
+.service-features {
+  padding: 80px 40px;
   background: #7F9492;
   color: white;
 }
 
-.feature-grid {
+.service-features .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
 .feature {
-  background: rgba(255,255,255,0.12);
-  padding: 25px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* =====================
-   SPLIT SECTION
+   IMAGE + TEXT
 ===================== */
-.split {
+.service-row {
   display: flex;
-  gap: 50px;
+  gap: 40px;
+  padding: 80px 40px;
   align-items: center;
 }
 
-.left, .right {
-  flex: 1;
+.service-img,
+.service-text {
+  width: 50%;
 }
 
-.left img {
+.service-img img {
   width: 100%;
   border-radius: 12px;
 }
 
+.service-text ul {
+  padding: 0;
+  list-style: none;
+}
+
+.service-text li {
+  margin-bottom: 10px;
+}
+
+.service-text li::before {
+  content: "•";
+  color: #D0AE8A;
+  margin-right: 8px;
+}
+
 /* =====================
-   RELATED SERVICES (FIXED CLICKABLE UI)
+   RELATED SERVICES (FIXED CLICKABLE)
 ===================== */
 .related-services {
+  padding: 80px 40px;
   text-align: center;
-  padding: 90px 40px;
 }
 
 .service-links-grid {
@@ -203,42 +211,40 @@ a { text-decoration: none; color: inherit; }
 .service-link-card {
   background: white;
   padding: 25px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  color: #1F4045;
   transition: 0.3s;
+  cursor: pointer;
   display: block;
 }
 
-.service-link-card h3 {
-  margin-bottom: 8px;
-}
-
 .service-link-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   background: #1F4045;
   color: white;
 }
 
-.service-link-card p {
-  font-size: 14px;
-  opacity: 0.85;
+.service-link-card span {
+  color: #D0AE8A;
+  font-weight: bold;
 }
 
 /* =====================
    CTA
 ===================== */
-.cta {
-  background: #D0AE8A;
+.service-cta {
+  padding: 80px 40px;
   text-align: center;
+  background: #D0AE8A;
   color: #1F4045;
 }
 
 /* =====================
-   FOOTER FIXED
+   FOOTER
 ===================== */
 .footer {
   background: #1F4045;
-  color: #EDE5D3;
+  color: white;
   padding: 60px 40px 20px;
 }
 
@@ -248,22 +254,15 @@ a { text-decoration: none; color: inherit; }
   gap: 30px;
 }
 
-.footer h3, .footer h2 {
-  color: #D0AE8A;
-}
-
 .footer a {
+  color: white;
   display: block;
   margin-bottom: 8px;
-  color: #EDE5D3;
-  opacity: 0.85;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 12px;
   opacity: 0.7;
 }
@@ -273,13 +272,18 @@ a { text-decoration: none; color: inherit; }
 ===================== */
 @media (max-width: 768px) {
 
-  .feature-grid,
+  .service-features .container,
   .service-links-grid {
     grid-template-columns: 1fr;
   }
 
-  .split {
+  .service-row {
     flex-direction: column;
+  }
+
+  .service-img,
+  .service-text {
+    width: 100%;
   }
 
   .footer-container {
@@ -287,8 +291,8 @@ a { text-decoration: none; color: inherit; }
     text-align: center;
   }
 
-  .hero-content h1 {
-    font-size: 32px;
+  .service-hero-text h1 {
+    font-size: 30px;
   }
 }
 
@@ -302,7 +306,7 @@ a { text-decoration: none; color: inherit; }
   <div class="nav-container">
 
     <a href="index.html" class="brand">
-      <img src="logo.jpg" class="logo-img" alt="Le Grant Logo">
+      <img src="logo.jpg" class="logo-img" alt="logo">
 
       <div class="brand-text">
         <span class="brand-name">LE GRANT</span>
@@ -321,91 +325,99 @@ a { text-decoration: none; color: inherit; }
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
+<section class="service-hero">
+  <div class="overlay"></div>
+  <div class="service-hero-text">
     <h1>Airport Transfers Cape Town</h1>
-    <p>Luxury Mercedes-Benz chauffeur-driven airport transfers available 24/7</p>
+    <p>Luxury Mercedes-Benz chauffeur-driven transfers available 24/7</p>
+    <a href="booking.html"><button>Book Now</button></a>
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section">
-  <div class="container">
-    <h2>Premium Airport Transfers</h2>
-    <p>Reliable, luxury and private airport transfer service in Cape Town.</p>
-  </div>
+<section class="service-intro">
+  <h2>Premium Airport Transfers</h2>
+  <p>Luxury airport transfer service with professional chauffeurs, real-time flight tracking, and Mercedes-Benz comfort.</p>
 </section>
 
-<!-- FEATURES (SEO FIXED CONTENT RESTORED) -->
-<section class="section features">
+<!-- FEATURES (FIXED FULL CONTENT) -->
+<section class="service-features">
   <div class="container">
 
     <div class="feature">
       <h3>Meet & Greet</h3>
-      <p>Your professional chauffeur will meet you inside Cape Town International Airport arrivals holding a personalised name sign, assist with luggage, and ensure a smooth, stress-free transition from airport to vehicle.</p>
+      <p>Personalised airport pickup inside arrivals with assistance.</p>
     </div>
 
     <div class="feature">
       <h3>Flight Tracking</h3>
-      <p>We track all flights in real time, adjusting pickup times automatically for delays or early arrivals so your chauffeur is always there exactly when you land.</p>
+      <p>We track your flight in real-time to adjust for delays or early arrival.</p>
     </div>
 
     <div class="feature">
       <h3>Luxury Fleet</h3>
-      <p>Travel in premium Mercedes-Benz vehicles including V-Class and S-Class models designed for comfort, privacy and executive travel.</p>
+      <p>Mercedes-Benz V-Class and S-Class executive vehicles.</p>
     </div>
 
     <div class="feature">
       <h3>24/7 Service</h3>
-      <p>Available 24 hours a day, 7 days a week, including weekends and holidays.</p>
+      <p>Available day and night, 365 days a year.</p>
     </div>
 
   </div>
 </section>
 
 <!-- IMAGE -->
-<section class="section split">
+<section class="service-row">
 
-  <div class="left">
-    <img src="vclass1.jpg" alt="Airport Transfer Cape Town Mercedes V-Class">
+  <div class="service-img">
+    <img src="vclass1.jpg" alt="">
   </div>
 
-  <div class="right">
+  <div class="service-text">
     <h2>Private Chauffeur Experience</h2>
-    <p>Professional, discreet and reliable airport transfers across Cape Town and surrounding areas.</p>
+    <ul>
+      <li>Professional chauffeurs</li>
+      <li>On-time guarantee</li>
+      <li>Luxury interiors</li>
+      <li>Secure transfers</li>
+    </ul>
   </div>
 
 </section>
 
-<!-- RELATED SERVICES (FIXED CLICKABLE CARDS) -->
+<!-- RELATED SERVICES (NOW PROPER BUTTON CARDS) -->
 <section class="related-services">
 
   <h2>Explore More Services</h2>
 
   <div class="service-links-grid">
 
-    <a href="chauffeur-service.html" class="service-link-card">
+    <a class="service-link-card" href="chauffeur-service.html">
       <h3>Private Chauffeur</h3>
-      <p>Executive door-to-door transport</p>
+      <p>Door-to-door luxury transport</p>
+      <span>View →</span>
     </a>
 
-    <a href="vip-transfers.html" class="service-link-card">
+    <a class="service-link-card" href="vip-transfers.html">
       <h3>VIP Transfers</h3>
-      <p>High-end discreet luxury travel</p>
+      <p>Luxury discreet travel</p>
+      <span>View →</span>
     </a>
 
-    <a href="wine-tours.html" class="service-link-card">
+    <a class="service-link-card" href="wine-tours.html">
       <h3>Wine Tours</h3>
-      <p>Cape Winelands luxury experiences</p>
+      <p>Cape Winelands experiences</p>
+      <span>View →</span>
     </a>
 
   </div>
+
 </section>
 
 <!-- CTA -->
-<section class="section cta">
-  <h2>Book Your Airport Transfer Today</h2>
+<section class="service-cta">
+  <h2>Book Your Airport Transfer</h2>
   <a href="booking.html"><button>Book Now</button></a>
 </section>
 
@@ -415,8 +427,8 @@ a { text-decoration: none; color: inherit; }
   <div class="footer-container">
 
     <div>
-      <h2>LE GRANT</h2>
-      <p>Luxury Chauffeur & Transfers</p>
+      <h3>Le Grant</h3>
+      <p>Luxury Chauffeur Service</p>
     </div>
 
     <div>
