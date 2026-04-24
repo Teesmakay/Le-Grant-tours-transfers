@@ -1373,3 +1373,26 @@ transform:translateY(-2px);
   border-radius: 6px;
   color: #1F4045 !important;
 }
+/* ===== LOGO FIX (DO NOT TOUCH LAYOUT) ===== */
+.logo-img {
+  width: 42px !important;
+  height: 42px !important;
+  max-width: 42px;
+  max-height: 42px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Prevent any global img rules from affecting logo */
+img.logo-img {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+/* Keep header aligned */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
