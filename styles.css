@@ -1206,7 +1206,7 @@ transform:translateY(-2px);
 
 .hero {
   height: 80vh;
-  background: url('vclass1.jpg') center/cover no-repeat;
+  background: url('car2.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
