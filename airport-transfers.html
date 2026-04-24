@@ -6,11 +6,15 @@
 
 <title>Airport Transfers Cape Town | Luxury Chauffeur | Le Grant Tours</title>
 
-<meta name="description" content="Luxury airport transfers in Cape Town with professional chauffeurs and Mercedes-Benz vehicles. Private, reliable and available 24/7. Book your transfer today.">
+<meta name="description" content="Luxury airport transfers in Cape Town with professional Mercedes-Benz chauffeurs. Meet & greet, flight tracking, and 24/7 private transfers from Cape Town International Airport.">
+<meta name="keywords" content="Cape Town airport transfers, luxury chauffeur Cape Town, Mercedes airport transfer, private airport pickup Cape Town">
 
 <link rel="canonical" href="https://www.legrant-tours.co.za/airport-transfers.html">
+
+<!-- FAVICON -->
 <link rel="icon" type="image/jpeg" href="logo.jpg">
 
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -25,15 +29,14 @@ body {
   color: #1F4045;
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: inherit; }
 
 /* =====================
-   HEADER (FIXED PREMIUM)
+   HEADER
 ===================== */
 .nav {
-  background: rgba(31, 64, 69, 0.92);
-  backdrop-filter: blur(10px);
-  padding: 12px 60px;
+  background: rgba(31, 64, 69, 0.95);
+  padding: 12px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -49,19 +52,18 @@ a { text-decoration: none; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  text-decoration: none;
+  gap: 10px;
 }
 
-/* LOGO FIX */
+/* SMALL LOGO FIX */
 .logo-img {
-  height: 38px;
   width: 38px;
-  object-fit: cover;
+  height: 38px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
-/* TEXT */
+/* TEXT FIX */
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -69,45 +71,27 @@ a { text-decoration: none; }
 }
 
 .brand-name {
-  color: #ffffff;
-  font-size: 15px;
+  color: #fff;
   font-weight: 700;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 
 .brand-sub {
   color: #D0AE8A;
   font-size: 10px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
 }
 
 /* NAV */
 .nav-links a {
   color: white;
-  margin-left: 22px;
+  margin-left: 18px;
   font-size: 14px;
-  transition: 0.3s;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #D0AE8A;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: #D0AE8A;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
 }
 
 .nav-btn {
@@ -120,7 +104,7 @@ a { text-decoration: none; }
 /* =====================
    HERO
 ===================== */
-.service-hero {
+.hero {
   height: 75vh;
   background: url('vclass1.jpg') center/cover no-repeat;
   display: flex;
@@ -128,130 +112,105 @@ a { text-decoration: none; }
   position: relative;
 }
 
-.service-hero .overlay {
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(31, 64, 69, 0.65);
 }
 
-.service-hero-text {
+.hero-content {
   position: relative;
-  margin-left: 10%;
+  margin-left: 8%;
   max-width: 650px;
   color: white;
-  z-index: 2;
 }
 
-.service-hero-text h1 {
+.hero-content h1 {
   font-size: 54px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-button {
-  background: #D0AE8A;
-  border: none;
-  padding: 12px 28px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  opacity: 0.85;
+.hero-content p {
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 /* =====================
-   INTRO
+   SECTIONS
 ===================== */
-.service-intro {
-  padding: 100px 60px;
+.section {
+  padding: 90px 40px;
 }
 
-.service-intro .container {
-  max-width: 900px;
+.container {
+  max-width: 1000px;
   margin: auto;
 }
 
 /* =====================
-   FEATURES
+   FEATURES (SEO TEXT FIXED)
 ===================== */
-.service-features {
-  padding: 100px 60px;
+.features {
   background: #7F9492;
   color: white;
 }
 
-.service-features .container {
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 25px;
 }
 
 .feature {
   background: rgba(255,255,255,0.12);
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
 }
 
 /* =====================
-   IMAGE ROW
+   SPLIT SECTION
 ===================== */
-.service-row {
+.split {
   display: flex;
-  gap: 60px;
-  padding: 100px 60px;
+  gap: 50px;
   align-items: center;
 }
 
-.service-img,
-.service-text {
-  width: 50%;
+.left, .right {
+  flex: 1;
 }
 
-.service-img img {
+.left img {
   width: 100%;
-  border-radius: 14px;
-}
-
-.service-text h2 {
-  font-size: 36px;
-}
-
-.service-text ul li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.service-text ul li::before {
-  content: "•";
-  color: #D0AE8A;
-  margin-right: 10px;
+  border-radius: 12px;
 }
 
 /* =====================
-   RELATED SERVICES (FIXED CLICKABLE)
+   RELATED SERVICES (FIXED CLICKABLE UI)
 ===================== */
 .related-services {
-  padding: 100px 60px;
   text-align: center;
+  padding: 90px 40px;
 }
 
 .service-links-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 40px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .service-link-card {
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 14px;
-  color: #1F4045;
-  text-align: left;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.06);
   transition: 0.3s;
   display: block;
+}
+
+.service-link-card h3 {
+  margin-bottom: 8px;
 }
 
 .service-link-card:hover {
@@ -260,82 +219,53 @@ button:hover {
   color: white;
 }
 
-.service-link-card span {
-  display: inline-block;
-  margin-top: 12px;
-  color: #D0AE8A;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.service-link-card:hover span {
-  transform: translateX(6px);
-}
-
-/* =====================
-   AREAS
-===================== */
-.service-areas {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-/* =====================
-   FAQ
-===================== */
-.service-faq {
-  padding: 100px 60px;
-  background: #1F4045;
-  color: white;
+.service-link-card p {
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 /* =====================
    CTA
 ===================== */
-.service-cta {
-  padding: 100px 60px;
-  text-align: center;
+.cta {
   background: #D0AE8A;
+  text-align: center;
   color: #1F4045;
 }
 
 /* =====================
-   FOOTER (FIXED)
+   FOOTER FIXED
 ===================== */
 .footer {
   background: #1F4045;
   color: #EDE5D3;
-  padding: 70px 60px 30px;
+  padding: 60px 40px 20px;
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
-.footer-col h2,
-.footer-col h3 {
+.footer h3, .footer h2 {
   color: #D0AE8A;
-  margin-bottom: 12px;
 }
 
-.footer-col a,
-.footer-col p {
-  color: #EDE5D3;
+.footer a {
   display: block;
   margin-bottom: 8px;
-  font-size: 14px;
+  color: #EDE5D3;
   opacity: 0.85;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255,255,255,0.1);
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* =====================
@@ -343,18 +273,13 @@ button:hover {
 ===================== */
 @media (max-width: 768px) {
 
-  .service-features .container,
+  .feature-grid,
   .service-links-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-row {
+  .split {
     flex-direction: column;
-  }
-
-  .service-img,
-  .service-text {
-    width: 100%;
   }
 
   .footer-container {
@@ -362,7 +287,7 @@ button:hover {
     text-align: center;
   }
 
-  .service-hero-text h1 {
+  .hero-content h1 {
     font-size: 32px;
   }
 }
@@ -372,12 +297,12 @@ button:hover {
 
 <body>
 
-<!-- NAV -->
+<!-- HEADER -->
 <header class="nav">
   <div class="nav-container">
 
     <a href="index.html" class="brand">
-      <img src="logo.jpg" class="logo-img" alt="logo">
+      <img src="logo.jpg" class="logo-img" alt="Le Grant Logo">
 
       <div class="brand-text">
         <span class="brand-name">LE GRANT</span>
@@ -396,131 +321,91 @@ button:hover {
 </header>
 
 <!-- HERO -->
-<section class="service-hero">
-  <div class="overlay"></div>
-  <div class="service-hero-text">
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <h1>Airport Transfers Cape Town</h1>
-    <p>Luxury Mercedes-Benz chauffeur-driven transfers available 24/7</p>
-    <a href="booking.html"><button>Book Now</button></a>
+    <p>Luxury Mercedes-Benz chauffeur-driven airport transfers available 24/7</p>
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="service-intro">
+<section class="section">
   <div class="container">
     <h2>Premium Airport Transfers</h2>
-    <p>Luxury, punctual and professional chauffeur service in Cape Town.</p>
+    <p>Reliable, luxury and private airport transfer service in Cape Town.</p>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="service-features">
-  <div class="container">
-
-    <div class="feature"><h3>Meet & Greet</h3></div>
-    <div class="feature"><h3>Flight Tracking</h3></div>
-    <div class="feature"><h3>Luxury Fleet</h3></div>
-    <div class="feature"><h3>24/7 Service</h3></div>
-
-  </div>
-</section>
-
-<!-- IMAGE + DETAILS -->
-<section class="service-row">
-
-  <div class="service-img">
-    <img src="vclass1.jpg" alt="Luxury Airport Transfer Cape Town">
-  </div>
-
-  <div class="service-text">
-    <h2>Private Chauffeur Experience</h2>
-
-    <p>
-      Experience seamless airport transfers in Cape Town with professional chauffeurs,
-      luxury Mercedes-Benz vehicles, and a service designed for comfort, privacy and reliability.
-    </p>
-
-    <ul>
-      <li>Professional chauffeurs</li>
-      <li>On-time guarantee</li>
-      <li>Luxury interiors</li>
-      <li>Secure transfers</li>
-    </ul>
-  </div>
-
-</section>
-
-  <!-- FEATURES -->
-<section class="service-features">
+<!-- FEATURES (SEO FIXED CONTENT RESTORED) -->
+<section class="section features">
   <div class="container">
 
     <div class="feature">
       <h3>Meet & Greet</h3>
-      <p>
-        Our professional chauffeur will meet you inside Cape Town International Airport arrivals
-        holding a personalised name sign, assisting with luggage and ensuring a smooth,
-        stress-free transition from airport to vehicle.
-      </p>
+      <p>Your professional chauffeur will meet you inside Cape Town International Airport arrivals holding a personalised name sign, assist with luggage, and ensure a smooth, stress-free transition from airport to vehicle.</p>
     </div>
 
     <div class="feature">
       <h3>Flight Tracking</h3>
-      <p>
-        We monitor all incoming and outgoing flights in real time to ensure your chauffeur
-        arrives exactly when you land. Whether your flight is delayed or early, we adjust
-        automatically for a seamless airport transfer experience.
-      </p>
+      <p>We track all flights in real time, adjusting pickup times automatically for delays or early arrivals so your chauffeur is always there exactly when you land.</p>
     </div>
 
     <div class="feature">
       <h3>Luxury Fleet</h3>
-      <p>
-        Travel in premium Mercedes-Benz vehicles including V-Class and S-Class models,
-        designed for maximum comfort, privacy, and executive-level luxury transport
-        across Cape Town and surrounding areas.
-      </p>
+      <p>Travel in premium Mercedes-Benz vehicles including V-Class and S-Class models designed for comfort, privacy and executive travel.</p>
     </div>
 
     <div class="feature">
       <h3>24/7 Service</h3>
-      <p>
-        Our airport transfer service operates 24 hours a day, 7 days a week, including
-        weekends and public holidays, ensuring reliable luxury transport whenever you arrive.
-      </p>
+      <p>Available 24 hours a day, 7 days a week, including weekends and holidays.</p>
     </div>
 
   </div>
 </section>
 
-<!-- RELATED -->
+<!-- IMAGE -->
+<section class="section split">
+
+  <div class="left">
+    <img src="vclass1.jpg" alt="Airport Transfer Cape Town Mercedes V-Class">
+  </div>
+
+  <div class="right">
+    <h2>Private Chauffeur Experience</h2>
+    <p>Professional, discreet and reliable airport transfers across Cape Town and surrounding areas.</p>
+  </div>
+
+</section>
+
+<!-- RELATED SERVICES (FIXED CLICKABLE CARDS) -->
 <section class="related-services">
 
   <h2>Explore More Services</h2>
 
   <div class="service-links-grid">
 
-    <a class="service-link-card" href="chauffeur-service.html">
+    <a href="chauffeur-service.html" class="service-link-card">
       <h3>Private Chauffeur</h3>
-      <span>View →</span>
+      <p>Executive door-to-door transport</p>
     </a>
 
-    <a class="service-link-card" href="vip-transfers.html">
+    <a href="vip-transfers.html" class="service-link-card">
       <h3>VIP Transfers</h3>
-      <span>View →</span>
+      <p>High-end discreet luxury travel</p>
     </a>
 
-    <a class="service-link-card" href="wine-tours.html">
+    <a href="wine-tours.html" class="service-link-card">
       <h3>Wine Tours</h3>
-      <span>View →</span>
+      <p>Cape Winelands luxury experiences</p>
     </a>
 
   </div>
-
 </section>
 
 <!-- CTA -->
-<section class="service-cta">
-  <h2>Book Your Airport Transfer</h2>
+<section class="section cta">
+  <h2>Book Your Airport Transfer Today</h2>
   <a href="booking.html"><button>Book Now</button></a>
 </section>
 
@@ -529,12 +414,12 @@ button:hover {
 
   <div class="footer-container">
 
-    <div class="footer-col">
+    <div>
       <h2>LE GRANT</h2>
-      <p>Luxury Chauffeur Service</p>
+      <p>Luxury Chauffeur & Transfers</p>
     </div>
 
-    <div class="footer-col">
+    <div>
       <h3>Quick Links</h3>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -542,13 +427,13 @@ button:hover {
       <a href="booking.html">Booking</a>
     </div>
 
-    <div class="footer-col">
+    <div>
       <h3>Contact</h3>
       <p>+27 79 622 0357</p>
       <p>reservations@legrant-tours.co.za</p>
     </div>
 
-    <div class="footer-col">
+    <div>
       <h3>Social</h3>
       <a href="#">Instagram</a>
       <a href="#">Facebook</a>
