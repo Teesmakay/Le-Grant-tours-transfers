@@ -6,25 +6,316 @@
 
 <title>Airport Transfers Cape Town | Luxury Chauffeur | Le Grant Tours</title>
 
-<meta name="description" content="Luxury airport transfers in Cape Town with Mercedes-Benz chauffeurs. Reliable 24/7 private transport from Cape Town International Airport.">
+<meta name="description" content="Luxury airport transfers in Cape Town with professional chauffeurs and Mercedes-Benz vehicles. Private, reliable and available 24/7. Book your transfer today.">
 
 <link rel="canonical" href="https://www.legrant-tours.co.za/airport-transfers.html">
 
-<link rel="stylesheet" href="styles.css">
-   <!-- FAVICON -->
-  <link rel="icon" href="logo.jpg" type="image/jpeg">
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* =====================
+   BASE
+===================== */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #EDE5D3;
+  color: #1F4045;
+}
+
+a { text-decoration: none; }
+
+/* =====================
+   HEADER
+===================== */
+.nav {
+  background: rgba(31, 64, 69, 0.95);
+  padding: 15px 60px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+}
+
+.nav-btn {
+  background: #D0AE8A;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #1F4045;
+}
+
+/* =====================
+   HERO
+===================== */
+.service-hero {
+  height: 75vh;
+  background: url('vclass1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.service-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 64, 69, 0.65);
+}
+
+.service-hero-text {
+  position: relative;
+  margin-left: 10%;
+  max-width: 650px;
+  color: white;
+  z-index: 2;
+}
+
+.service-hero-text h1 {
+  font-size: 54px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #D0AE8A;
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =====================
+   INTRO
+===================== */
+.service-intro {
+  padding: 100px 60px;
+}
+
+.service-intro .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =====================
+   FEATURES
+===================== */
+.service-features {
+  padding: 100px 60px;
+  background: #7F9492;
+  color: white;
+}
+
+.service-features .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  background: rgba(255,255,255,0.12);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* =====================
+   IMAGE ROW
+===================== */
+.service-row {
+  display: flex;
+  gap: 60px;
+  padding: 100px 60px;
+  align-items: center;
+}
+
+.service-img, .service-text {
+  width: 50%;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.service-text h2 {
+  font-size: 36px;
+}
+
+.service-text ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.service-text ul li::before {
+  content: "•";
+  color: #D0AE8A;
+  margin-right: 10px;
+}
+
+/* =====================
+   RELATED SERVICES (FIXED CLICKABLE CARDS)
+===================== */
+.related-services {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.service-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.service-link-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  color: #1F4045;
+  text-align: left;
+  transition: 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-link-card:hover {
+  transform: translateY(-8px);
+  background: #1F4045;
+  color: white;
+}
+
+.service-link-card span {
+  display: block;
+  margin-top: 15px;
+  color: #D0AE8A;
+  font-weight: bold;
+}
+
+/* =====================
+   AREAS
+===================== */
+.service-areas {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+/* =====================
+   FAQ
+===================== */
+.service-faq {
+  padding: 100px 60px;
+  background: #1F4045;
+  color: white;
+}
+
+/* =====================
+   CTA
+===================== */
+.service-cta {
+  padding: 100px 60px;
+  text-align: center;
+  background: #D0AE8A;
+  color: #1F4045;
+}
+
+/* =====================
+   FOOTER (FIXED GRID)
+===================== */
+.footer {
+  background: #1F4045;
+  color: #EDE5D3;
+  padding: 80px 60px 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  color: #D0AE8A;
+}
+
+.footer-col a,
+.footer-col p {
+  color: #EDE5D3;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 768px) {
+
+  .service-features .container,
+  .service-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row {
+    flex-direction: column;
+  }
+
+  .service-img,
+  .service-text {
+    width: 100%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-hero-text h1 {
+    font-size: 32px;
+  }
+}
+
+</style>
 </head>
 
 <body>
+
 <!-- NAV -->
 <header class="nav">
-  <div class="nav-wrapper">
+  <div class="nav-container">
 
-    <div class="logo-container">
-      <img src="logo.jpg" alt="Le Grant Tours Logo">
-      <a href="index.html" class="logo">LE GRANT</a>
-    </div>
+    <!-- LOGO + BRAND -->
+    <a href="index.html" class="brand">
 
+      <img src="logo.jpg" alt="Le Grant Tours Logo" class="logo-img">
+
+      <div class="brand-text">
+        <span class="brand-name">LE GRANT</span>
+        <span class="brand-sub">Tours & Transfers</span>
+      </div>
+
+    </a>
+
+    <!-- NAV LINKS -->
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -36,194 +327,143 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
+<section class="service-hero">
+  <div class="overlay"></div>
 
-  <div class="hero-content">
+  <div class="service-hero-text">
     <h1>Airport Transfers Cape Town</h1>
-    <p>Luxury Mercedes-Benz chauffeur-driven airport transfers available 24/7</p>
-
-    <a href="booking.html">
-      <button class="btn">Book Your Transfer</button>
-    </a>
+    <p>Luxury Mercedes-Benz chauffeur-driven transfers available 24/7</p>
+    <a href="booking.html"><button>Book Now</button></a>
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section">
+<section class="service-intro">
   <div class="container">
-
-    <h2>Premium Airport Transfer Service</h2>
-
-    <p>
-      Le Grant Tours & Transfers provides luxury airport transfers in Cape Town,
-      ensuring a seamless, private and professional travel experience.
-    </p>
-
-    <p>
-      We specialise in Mercedes-Benz chauffeur services for business travellers,
-      VIP guests and international visitors arriving at Cape Town International Airport.
-    </p>
-
+    <h2>Premium Airport Transfers</h2>
+    <p>Luxury, punctual and professional chauffeur service in Cape Town.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="section features">
+<section class="service-features">
   <div class="container">
 
-    <h2>Why Choose Our Airport Transfers</h2>
+    <div class="feature">
+      <h3>Meet & Greet</h3>
+      <p>Personal airport welcome service.</p>
+    </div>
 
-    <div class="feature-grid">
+    <div class="feature">
+      <h3>Flight Tracking</h3>
+      <p>Real-time monitoring of flights.</p>
+    </div>
 
-      <div class="feature">
-        <h3>Flight Tracking</h3>
-        <p>We monitor all flights for delays and early arrivals.</p>
-      </div>
+    <div class="feature">
+      <h3>Luxury Fleet</h3>
+      <p>Mercedes V-Class & S-Class vehicles.</p>
+    </div>
 
-      <div class="feature">
-        <h3>Meet & Greet</h3>
-        <p>Your chauffeur waits inside arrivals with a name sign.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Luxury Fleet</h3>
-        <p>Mercedes V-Class, S-Class and executive vehicles.</p>
-      </div>
-
-      <div class="feature">
-        <h3>24/7 Availability</h3>
-        <p>Available day and night, including holidays.</p>
-      </div>
-
+    <div class="feature">
+      <h3>24/7 Service</h3>
+      <p>Always available.</p>
     </div>
 
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section class="section">
-  <div class="split">
+<!-- IMAGE -->
+<section class="service-row">
 
-    <div class="left">
-      <img src="vclass1.jpg" alt="Luxury Airport Transfer Cape Town Mercedes V-Class">
-    </div>
-
-    <div class="right">
-
-      <h2>Private Chauffeur Experience</h2>
-
-      <p>
-        Every airport transfer is handled with precision, discretion and comfort.
-        Our chauffeurs are professionally trained and experienced in VIP transport.
-      </p>
-
-      <ul>
-        <li>Professional licensed chauffeurs</li>
-        <li>On-time guarantee</li>
-        <li>Private secure transport</li>
-        <li>Luxury interiors</li>
-      </ul>
-
-    </div>
-
+  <div class="service-img">
+    <img src="vclass1.jpg" alt="">
   </div>
+
+  <div class="service-text">
+    <h2>Private Chauffeur Experience</h2>
+    <ul>
+      <li>Professional chauffeurs</li>
+      <li>On-time guarantee</li>
+      <li>Luxury interiors</li>
+      <li>Secure transfers</li>
+    </ul>
+  </div>
+
 </section>
 
-<!-- RELATED SERVICES -->
+<!-- RELATED -->
 <section class="related-services">
 
-  <h2>Explore More Luxury Services</h2>
+  <h2>Explore More Services</h2>
 
   <div class="service-links-grid">
 
-    <a href="chauffeur-service.html" class="service-link-card">
+    <a class="service-link-card" href="chauffeur-service.html">
       <h3>Private Chauffeur</h3>
-      <p>Executive door-to-door transport</p>
+      <p>Door-to-door luxury transport</p>
+      <span>View →</span>
     </a>
 
-    <a href="vip-transfers.html" class="service-link-card">
+    <a class="service-link-card" href="vip-transfers.html">
       <h3>VIP Transfers</h3>
-      <p>High-end discreet luxury travel</p>
+      <p>Discreet luxury travel</p>
+      <span>View →</span>
     </a>
 
-    <a href="wine-tours.html" class="service-link-card">
+    <a class="service-link-card" href="wine-tours.html">
       <h3>Wine Tours</h3>
-      <p>Cape Winelands luxury experiences</p>
+      <p>Cape Winelands experiences</p>
+      <span>View →</span>
     </a>
 
-  </div>
-
-</section>
-
-<!-- AREAS -->
-<section class="service-areas">
-  <h2>Areas We Serve</h2>
-  <p>
-    Cape Town, Camps Bay, Clifton, Sea Point, Green Point, Constantia, Stellenbosch, Cape Winelands
-  </p>
-</section>
-
-<!-- FAQ -->
-<section class="section faq">
-
-  <h2>Airport Transfer FAQs</h2>
-
-  <div class="faq-item">
-    <h3>Do you track flights?</h3>
-    <p>Yes, we monitor all flights in real-time.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Are transfers available 24/7?</h3>
-    <p>Yes, we operate 24 hours a day, 7 days a week.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>What vehicles do you use?</h3>
-    <p>Mercedes-Benz V-Class, S-Class and executive fleet vehicles.</p>
   </div>
 
 </section>
 
 <!-- CTA -->
-<section class="section cta">
-
-  <h2>Book Your Airport Transfer Today</h2>
-  <p>Luxury, reliability and professionalism from Cape Town’s premium chauffeur service.</p>
-
-  <a href="booking.html">
-    <button class="btn">Book Now</button>
-  </a>
-
+<section class="service-cta">
+  <h2>Book Your Airport Transfer</h2>
+  <a href="booking.html"><button>Book Now</button></a>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
 
-<div class="footer-top">
+  <div class="footer-container">
 
-<div>
-<h2>LE GRANT</h2>
-<p>Luxury Tours & Transfers</p>
-</div>
+    <div class="footer-col">
+      <h2>LE GRANT</h2>
+      <p>Luxury Chauffeur Service</p>
+    </div>
 
-<div class="footer-links">
-<a href="index.html">Home</a>
-<a href="fleet.html">Fleet</a>
-<a href="services.html">Services</a>
-<a href="booking.html">Booking</a>
-</div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a>
+      <a href="booking.html">Booking</a>
+    </div>
 
-<div class="footer-socials">
-<a href="https://instagram.com/legrant_tours" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://facebook.com/profile.php?id=61576402285973" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://wa.me/27796220357" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>+27 79 622 0357</p>
+      <p>reservations@legrant-tours.co.za</p>
+    </div>
 
-</div>
+    <div class="footer-col">
+      <h3>Social</h3>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">WhatsApp</a>
+    </div>
 
-<p>© 2026 Le Grant Tours & Transfers. All rights reserved.</p>
-  <script src="script.js"></script>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Le Grant Tours & Transfers</p>
+  </div>
 
 </footer>
+
+</body>
+</html>
