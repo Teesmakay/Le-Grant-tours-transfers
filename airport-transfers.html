@@ -9,8 +9,8 @@
 <meta name="description" content="Luxury airport transfers in Cape Town with professional chauffeurs and Mercedes-Benz vehicles. Private, reliable and available 24/7. Book your transfer today.">
 
 <link rel="canonical" href="https://www.legrant-tours.co.za/airport-transfers.html">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
 
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -28,11 +28,15 @@ body {
 a { text-decoration: none; }
 
 /* =====================
-   HEADER
+   HEADER (FIXED PREMIUM)
 ===================== */
 .nav {
-  background: rgba(31, 64, 69, 0.95);
-  padding: 15px 60px;
+  background: rgba(31, 64, 69, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 12px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -41,22 +45,76 @@ a { text-decoration: none; }
   align-items: center;
 }
 
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
-nav a {
+/* LOGO FIX */
+.logo-img {
+  height: 38px;
+  width: 38px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* TEXT */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  color: #D0AE8A;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* NAV */
+.nav-links a {
   color: white;
-  margin-left: 20px;
+  margin-left: 22px;
+  font-size: 14px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #D0AE8A;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #D0AE8A;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-btn {
   background: #D0AE8A;
   padding: 8px 14px;
   border-radius: 6px;
-  color: #1F4045;
+  color: #1F4045 !important;
 }
 
 /* =====================
@@ -95,6 +153,11 @@ button {
   padding: 12px 28px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.85;
 }
 
 /* =====================
@@ -140,7 +203,8 @@ button {
   align-items: center;
 }
 
-.service-img, .service-text {
+.service-img,
+.service-text {
   width: 50%;
 }
 
@@ -165,7 +229,7 @@ button {
 }
 
 /* =====================
-   RELATED SERVICES (FIXED CLICKABLE CARDS)
+   RELATED SERVICES (FIXED CLICKABLE)
 ===================== */
 .related-services {
   padding: 100px 60px;
@@ -185,8 +249,9 @@ button {
   border-radius: 14px;
   color: #1F4045;
   text-align: left;
-  transition: 0.3s;
   border: 1px solid rgba(0,0,0,0.05);
+  transition: 0.3s;
+  display: block;
 }
 
 .service-link-card:hover {
@@ -196,10 +261,15 @@ button {
 }
 
 .service-link-card span {
-  display: block;
-  margin-top: 15px;
+  display: inline-block;
+  margin-top: 12px;
   color: #D0AE8A;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.service-link-card:hover span {
+  transform: translateX(6px);
 }
 
 /* =====================
@@ -230,12 +300,12 @@ button {
 }
 
 /* =====================
-   FOOTER (FIXED GRID)
+   FOOTER (FIXED)
 ===================== */
 .footer {
   background: #1F4045;
   color: #EDE5D3;
-  padding: 80px 60px 30px;
+  padding: 70px 60px 30px;
 }
 
 .footer-container {
@@ -247,13 +317,16 @@ button {
 .footer-col h2,
 .footer-col h3 {
   color: #D0AE8A;
+  margin-bottom: 12px;
 }
 
 .footer-col a,
 .footer-col p {
   color: #EDE5D3;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .footer-bottom {
@@ -261,8 +334,8 @@ button {
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.15);
-  font-size: 13px;
-  opacity: 0.7;
+  font-size: 12px;
+  opacity: 0.6;
 }
 
 /* =====================
@@ -303,19 +376,15 @@ button {
 <header class="nav">
   <div class="nav-container">
 
-    <!-- LOGO + BRAND -->
     <a href="index.html" class="brand">
-
-      <img src="logo.jpg" alt="Le Grant Tours Logo" class="logo-img">
+      <img src="logo.jpg" class="logo-img" alt="logo">
 
       <div class="brand-text">
         <span class="brand-name">LE GRANT</span>
         <span class="brand-sub">Tours & Transfers</span>
       </div>
-
     </a>
 
-    <!-- NAV LINKS -->
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -329,7 +398,6 @@ button {
 <!-- HERO -->
 <section class="service-hero">
   <div class="overlay"></div>
-
   <div class="service-hero-text">
     <h1>Airport Transfers Cape Town</h1>
     <p>Luxury Mercedes-Benz chauffeur-driven transfers available 24/7</p>
@@ -349,25 +417,10 @@ button {
 <section class="service-features">
   <div class="container">
 
-    <div class="feature">
-      <h3>Meet & Greet</h3>
-      <p>Personal airport welcome service.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Flight Tracking</h3>
-      <p>Real-time monitoring of flights.</p>
-    </div>
-
-    <div class="feature">
-      <h3>Luxury Fleet</h3>
-      <p>Mercedes V-Class & S-Class vehicles.</p>
-    </div>
-
-    <div class="feature">
-      <h3>24/7 Service</h3>
-      <p>Always available.</p>
-    </div>
+    <div class="feature"><h3>Meet & Greet</h3></div>
+    <div class="feature"><h3>Flight Tracking</h3></div>
+    <div class="feature"><h3>Luxury Fleet</h3></div>
+    <div class="feature"><h3>24/7 Service</h3></div>
 
   </div>
 </section>
@@ -376,7 +429,7 @@ button {
 <section class="service-row">
 
   <div class="service-img">
-    <img src="vclass1.jpg" alt="">
+    <img src="vclass1.jpg">
   </div>
 
   <div class="service-text">
@@ -400,19 +453,16 @@ button {
 
     <a class="service-link-card" href="chauffeur-service.html">
       <h3>Private Chauffeur</h3>
-      <p>Door-to-door luxury transport</p>
       <span>View →</span>
     </a>
 
     <a class="service-link-card" href="vip-transfers.html">
       <h3>VIP Transfers</h3>
-      <p>Discreet luxury travel</p>
       <span>View →</span>
     </a>
 
     <a class="service-link-card" href="wine-tours.html">
       <h3>Wine Tours</h3>
-      <p>Cape Winelands experiences</p>
       <span>View →</span>
     </a>
 
@@ -460,7 +510,7 @@ button {
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 Le Grant Tours & Transfers</p>
+    © 2026 Le Grant Tours & Transfers
   </div>
 
 </footer>
