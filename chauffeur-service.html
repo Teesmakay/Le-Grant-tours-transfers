@@ -4,254 +4,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Private Chauffeur Cape Town | Executive Driver Service | Le Grant Tours</title>
+<title>Private Chauffeur Service Cape Town | Luxury Mercedes-Benz Driver</title>
 
-<meta name="description" content="Luxury private chauffeur service in Cape Town with professional drivers and Mercedes-Benz fleet. Hourly, daily and executive chauffeur-driven transport available 24/7.">
-
-<meta name="keywords" content="private chauffeur Cape Town, executive driver Cape Town, luxury chauffeur service, hourly driver Cape Town, Mercedes chauffeur South Africa">
+<meta name="description" content="Luxury private chauffeur service in Cape Town with Mercedes-Benz G-Class and V-Class vehicles. Hourly hire, executive transport and VIP travel 24/7.">
 
 <link rel="canonical" href="https://www.legrant-tours.co.za/chauffeur-service.html">
-<link rel="icon" type="image/jpeg" href="logo.jpg">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
 
 <style>
 
 /* =====================
    BASE
 ===================== */
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #EDE5D3;
-  color: #1F4045;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#EDE5D3;
+  color:#1F4045;
 }
 
-a { text-decoration: none; color: inherit; }
+a{text-decoration:none; color:inherit}
 
 /* =====================
-   HEADER
+   NAV
 ===================== */
-.nav {
-  background: rgba(31, 64, 69, 0.95);
-  padding: 12px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.nav{
+  background:#1F4045;
+  padding:15px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-/* BRAND */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.brand img{
+  width:40px;
+  height:40px;
+  object-fit:cover;
+  border-radius:6px;
 }
 
-.logo-img {
-  width: 38px;
-  height: 38px;
-  border-radius: 6px;
-  object-fit: cover;
+.brand span{
+  color:white;
+  font-weight:bold;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.nav a{
+  color:white;
+  margin-left:20px;
 }
 
-.brand-name {
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.brand-sub {
-  color: #D0AE8A;
-  font-size: 10px;
-}
-
-/* NAV */
-.nav-links a {
-  color: white;
-  margin-left: 18px;
-  font-size: 14px;
-}
-
-.nav-btn {
-  background: #D0AE8A;
-  padding: 8px 14px;
-  border-radius: 6px;
-  color: #1F4045 !important;
+.btn{
+  background:#D0AE8A;
+  padding:10px 16px;
+  border-radius:6px;
+  color:#1F4045;
+  font-weight:bold;
 }
 
 /* =====================
-   HERO
+   HERO (G CLASS FOCUS)
 ===================== */
-.hero {
-  height: 80vh;
-  background: url('vclasspremium.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  position: relative;
+.hero{
+  height:80vh;
+  background:url('Gclass.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  position:relative;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(31, 64, 69, 0.65);
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(31,64,69,0.65);
 }
 
-.hero-content {
-  position: relative;
-  margin-left: 8%;
-  max-width: 700px;
-  color: white;
+.hero-content{
+  position:relative;
+  margin-left:8%;
+  max-width:600px;
+  color:white;
 }
 
-.hero-content h1 {
-  font-size: 54px;
-  margin-bottom: 10px;
+.hero-content h1{
+  font-size:52px;
+  margin-bottom:10px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  opacity: 0.9;
+.hero-content p{
+  font-size:18px;
+  opacity:0.9;
 }
 
 /* =====================
-   SECTIONS
+   SECTION
 ===================== */
-.section {
-  padding: 90px 40px;
+.section{
+  padding:90px 60px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+.container{
+  max-width:1100px;
+  margin:auto;
 }
 
 /* =====================
-   INTRO
+   SERVICES GRID (FIXED SEO + UX)
 ===================== */
-.intro h2 {
-  font-size: 38px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.card h3{
+  margin-bottom:10px;
 }
 
 /* =====================
-   FEATURES
+   FLEET (FIX IMAGE ISSUE)
 ===================== */
-.features {
-  background: #7F9492;
-  color: white;
+.fleet{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
-
-.feature {
-  background: rgba(255,255,255,0.12);
-  padding: 25px;
-  border-radius: 12px;
+.fleet img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
 }
 
 /* =====================
-   SPLIT
+   HOURLY HIRE (CLEAN CARDS)
 ===================== */
-.split {
-  display: flex;
-  gap: 50px;
-  align-items: center;
+.hourly{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.split img {
-  width: 100%;
-  border-radius: 14px;
+.hour-card{
+  background:#1F4045;
+  color:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
 }
 
-/* =====================
-   FLEET SECTION
-===================== */
-.fleet {
-  text-align: center;
-}
-
-.fleet-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.fleet-card {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.fleet-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.hour-card h3{
+  color:#D0AE8A;
 }
 
 /* =====================
    CTA
 ===================== */
-.cta {
-  background: #D0AE8A;
-  text-align: center;
-  color: #1F4045;
+.cta{
+  background:#D0AE8A;
+  text-align:center;
+  padding:90px 60px;
 }
 
-/* =====================
-   FOOTER
-===================== */
-.footer {
-  background: #1F4045;
-  color: #EDE5D3;
-  padding: 60px 40px 20px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 12px;
+.cta button{
+  padding:12px 22px;
+  border:none;
+  background:#1F4045;
+  color:white;
+  font-weight:bold;
+  border-radius:6px;
 }
 
 /* =====================
    MOBILE
 ===================== */
-@media (max-width: 768px) {
-
-  .feature-grid,
-  .fleet-grid {
-    grid-template-columns: 1fr;
+@media(max-width:768px){
+  .grid,.fleet,.hourly{
+    grid-template-columns:1fr;
   }
 
-  .split {
-    flex-direction: column;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
+  .hero-content h1{
+    font-size:34px;
   }
 }
 
@@ -260,168 +208,128 @@ a { text-decoration: none; color: inherit; }
 
 <body>
 
-<!-- HEADER -->
+<!-- NAV -->
 <header class="nav">
-  <div class="nav-container">
 
-    <a href="index.html" class="brand">
-      <img src="logo.jpg" class="logo-img" alt="logo">
-
-      <div class="brand-text">
-        <span class="brand-name">LE GRANT</span>
-        <span class="brand-sub">Tours & Transfers</span>
-      </div>
-    </a>
-
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="fleet.html">Fleet</a>
-      <a href="booking.html" class="nav-btn">Book</a>
-    </nav>
-
+  <div class="brand">
+    <img src="logo.jpg">
+    <span>LE GRANT</span>
   </div>
+
+  <div>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="fleet.html">Fleet</a>
+    <a class="btn" href="booking.html">Book</a>
+  </div>
+
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <h1>Private Chauffeur Service Cape Town</h1>
-    <p>Luxury executive driver service available hourly, daily or long-distance</p>
+    <p>Luxury Mercedes-Benz G-Class & V-Class chauffeur-driven executive transport</p>
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section intro">
+<section class="section">
   <div class="container">
 
-    <h2>Premium Private Chauffeur Experience</h2>
-
+    <h2>Executive Chauffeur Experience</h2>
     <p>
-      Our private chauffeur service in Cape Town offers a personalised luxury transport experience for business executives,
-      VIP clients and travellers who require flexibility, comfort and professionalism.
+      Premium private chauffeur service in Cape Town designed for business executives, VIP clients,
+      and luxury travellers who require comfort, privacy and reliability.
     </p>
 
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="section features">
+<!-- SERVICES GRID -->
+<section class="section">
   <div class="container">
 
-    <div class="feature">
-      <h3>Hourly Hire</h3>
-      <p>Flexible chauffeur service by the hour for meetings, events or city travel.</p>
-    </div>
+    <h2>Chauffeur Services</h2>
 
-    <div class="feature">
-      <h3>Executive Travel</h3>
-      <p>Ideal for business professionals requiring private, reliable transport.</p>
-    </div>
+    <div class="grid">
 
-    <div class="feature">
-      <h3>Luxury Fleet</h3>
-      <p>Mercedes-Benz G-Class, V-Class and executive vehicles.</p>
-    </div>
+      <div class="card">
+        <h3>Hourly Hire</h3>
+        <p>Flexible luxury transport available by the hour for business meetings or city travel.</p>
+      </div>
 
-    <div class="feature">
-      <h3>Professional Drivers</h3>
-      <p>Trained, discreet chauffeurs with VIP experience.</p>
+      <div class="card">
+        <h3>Corporate Travel</h3>
+        <p>Professional chauffeur service for executives and corporate clients.</p>
+      </div>
+
+      <div class="card">
+        <h3>VIP Transfers</h3>
+        <p>Discreet, high-end transport for private clients and celebrities.</p>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<!-- SPLIT IMAGE -->
-<section class="section split">
+<!-- HOURLY HIRE -->
+<section class="section">
+  <div class="container">
 
-  <div>
-    <img src="driver.jpg" alt="Professional chauffeur Cape Town">
+    <h2>Hourly Chauffeur Hire Options</h2>
+
+    <div class="hourly">
+
+      <div class="hour-card">
+        <h3>3 Hours</h3>
+        <p>Short city trips & meetings</p>
+      </div>
+
+      <div class="hour-card">
+        <h3>6 Hours</h3>
+        <p>Half-day executive service</p>
+      </div>
+
+      <div class="hour-card">
+        <h3>12 Hours</h3>
+        <p>Full-day luxury chauffeur</p>
+      </div>
+
+    </div>
+
   </div>
-
-  <div>
-    <h2>Discreet & Professional Chauffeurs</h2>
-    <p>
-      Our chauffeurs provide a premium service experience focused on punctuality, discretion and comfort.
-      Perfect for corporate clients and private VIP transport.
-    </p>
-  </div>
-
 </section>
 
-<!-- FLEET -->
-<section class="section fleet">
+<!-- FLEET (FIXED IMAGES) -->
+<section class="section">
+  <div class="container">
 
-  <h2>Luxury Fleet Available</h2>
+    <h2>Our Luxury Fleet</h2>
 
-  <div class="fleet-grid">
+    <div class="fleet">
 
-    <div class="fleet-card">
-      <img src="GClass.jpg" alt="Mercedes G-Class Chauffeur Cape Town">
-    </div>
+      <img src="GClass2.jpg" alt="Mercedes G-Class Chauffeur Cape Town">
+      <img src="VCLASS.JPG" alt="Mercedes V-Class Interior">
+      <img src="vclassinside.JPG" alt="Luxury Interior Chauffeur Cape Town">
 
-    <div class="fleet-card">
-      <img src="vclassgrey.jpg" alt="Mercedes V-Class Chauffeur Cape Town">
-    </div>
-
-    <div class="fleet-card">
-      <img src="vclasspremium.jpg" alt="Premium Mercedes Chauffeur Cape Town">
     </div>
 
   </div>
-
 </section>
 
 <!-- CTA -->
-<section class="section cta">
+<section class="cta">
 
-  <h2>Book Your Private Chauffeur Today</h2>
-  <p>Luxury, flexibility and professionalism on demand</p>
+  <h2>Book Your Chauffeur Today</h2>
+  <p>Luxury, privacy and professionalism guaranteed</p>
 
-  <a href="booking.html"><button>Book Now</button></a>
+  <a href="booking.html">
+    <button>Book Now</button>
+  </a>
 
 </section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <div>
-      <h3>LE GRANT</h3>
-      <p>Luxury Chauffeur Services</p>
-    </div>
-
-    <div>
-      <h3>Quick Links</h3>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="fleet.html">Fleet</a>
-      <a href="booking.html">Booking</a>
-    </div>
-
-    <div>
-      <h3>Contact</h3>
-      <p>+27 79 622 0357</p>
-      <p>reservations@legrant-tours.co.za</p>
-    </div>
-
-    <div>
-      <h3>Social</h3>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">WhatsApp</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Le Grant Tours & Transfers
-  </div>
-
-</footer>
 
 </body>
 </html>
