@@ -6,7 +6,7 @@
 
 <title>Luxury Fleet Cape Town | Le Grant Chauffeur Services</title>
 
-<meta name="description" content="Luxury chauffeur services in Cape Town. Mercedes V-Class, S-Class, C-Class, G-Class and Hyundai Staria available for airport transfers, private tours and VIP travel.">
+<meta name="description" content="Luxury chauffeur services in Cape Town. Mercedes V-Class, S-Class, C-Class, G-Class and Hyundai Staria available.">
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -44,9 +44,13 @@ background:#EDE5D3;
 .fleet-row{
 display:flex;
 align-items:center;
-gap:30px;
+gap:40px;
 margin-bottom:100px;
 flex-wrap:wrap;
+}
+
+.fleet-row.reverse{
+flex-direction:row-reverse;
 }
 
 /* SLIDER */
@@ -59,7 +63,6 @@ max-width:650px;
 .slider img{
 width:100%;
 border-radius:20px;
-transition:0.4s;
 }
 
 /* ARROWS */
@@ -92,6 +95,19 @@ color:#D0AE8A;
 font-size:20px;
 font-weight:bold;
 margin:10px 0;
+}
+
+.specs{
+margin:10px 0;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+.specs span{
+background:#fff;
+padding:8px 12px;
+border-radius:10px;
+font-size:13px;
 }
 
 /* STATUS */
@@ -153,19 +169,24 @@ font-weight:bold;
 <div class="fleet-text">
 <h2>Mercedes-Benz V-Class</h2>
 <div class="price">From R5,000</div>
-<p>Luxury group transport for airport transfers, tours and events.</p>
+<p>Luxury group transport for tours, airport transfers and events.</p>
+
+<div class="specs">
+<span>6–7 Passengers</span>
+<span>6 Luggage</span>
+</div>
 
 <div class="status" id="status-v"></div>
 
 <div class="actions">
-<a href="booking.html"><button class="book">Reserve</button></a>
+<a href="airport-transfers.html"><button class="book">Airport Transfers</button></a>
 <button class="whatsapp" onclick="bookCar('V-Class')">WhatsApp</button>
 </div>
 </div>
 </div>
 
 <!-- S CLASS -->
-<div class="fleet-row">
+<div class="fleet-row reverse">
 <div class="slider" data-car="S-Class">
 <img src="sclass1.jpg">
 <button class="prev">‹</button>
@@ -177,9 +198,15 @@ font-weight:bold;
 <div class="price">From R4,999</div>
 <p>Executive VIP chauffeur experience.</p>
 
+<div class="specs">
+<span>2–3 Passengers</span>
+<span>2 Luggage</span>
+</div>
+
 <div class="status" id="status-s"></div>
 
 <div class="actions">
+<a href="vip-transfers.html"><button class="book">VIP Transfers</button></a>
 <button class="whatsapp" onclick="bookCar('S-Class')">WhatsApp</button>
 </div>
 </div>
@@ -196,18 +223,24 @@ font-weight:bold;
 <div class="fleet-text">
 <h2>Mercedes-Benz C-Class</h2>
 <div class="price">From R3,000</div>
-<p>Comfort and style for city travel.</p>
+<p>Comfortable city and airport transport.</p>
+
+<div class="specs">
+<span>3–4 Passengers</span>
+<span>3 Luggage</span>
+</div>
 
 <div class="status" id="status-c"></div>
 
 <div class="actions">
+<a href="chauffeur-service.html"><button class="book">Chauffeur</button></a>
 <button class="whatsapp" onclick="bookCar('C-Class')">WhatsApp</button>
 </div>
 </div>
 </div>
 
 <!-- G CLASS -->
-<div class="fleet-row">
+<div class="fleet-row reverse">
 <div class="slider" data-car="G-Class">
 <img src="gclass1.jpg">
 <button class="prev">‹</button>
@@ -217,11 +250,17 @@ font-weight:bold;
 <div class="fleet-text">
 <h2>Mercedes-Benz G-Class</h2>
 <div class="price">From R7,500</div>
-<p>Ultra luxury SUV for VIP and exclusive travel.</p>
+<p>Ultra luxury SUV for VIP experiences.</p>
+
+<div class="specs">
+<span>4 Passengers</span>
+<span>3 Luggage</span>
+</div>
 
 <div class="status" id="status-g"></div>
 
 <div class="actions">
+<a href="vip-transfers.html"><button class="book">VIP Experience</button></a>
 <button class="whatsapp" onclick="bookCar('G-Class')">WhatsApp</button>
 </div>
 </div>
@@ -238,11 +277,17 @@ font-weight:bold;
 <div class="fleet-text">
 <h2>Hyundai Staria</h2>
 <div class="price">From R4,500</div>
-<p>Modern group transport alternative with comfort and space.</p>
+<p>Spacious modern transport for group travel.</p>
+
+<div class="specs">
+<span>6–7 Passengers</span>
+<span>5 Luggage</span>
+</div>
 
 <div class="status" id="status-staria"></div>
 
 <div class="actions">
+<a href="wine-tours.html"><button class="book">Wine Tours</button></a>
 <button class="whatsapp" onclick="bookCar('Staria')">WhatsApp</button>
 </div>
 </div>
@@ -251,25 +296,25 @@ font-weight:bold;
 </section>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/27796220357" class="whatsapp-float">
+<a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
 
-/* MENU FIX */
+/* MENU */
 function toggleMenu(){
 document.getElementById("menuOverlay").classList.toggle("active");
 }
 
-/* WHATSAPP FIX */
+/* WHATSAPP */
 function bookCar(car){
 let phone="27796220357";
 let msg = `Hello, I want to book a ${car} in Cape Town`;
 window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
 }
 
-/* SLIDERS */
+/* SLIDER */
 const sliders={
 "V-Class":["vclass1.jpg","vclass2.jpg"],
 "S-Class":["sclass1.jpg","sclass2.jpg"],
@@ -324,11 +369,21 @@ dynamicStatus(document.getElementById("status-staria"));
     <!-- BRAND -->
     <div>
       <h2>LE GRANT</h2>
-      <p>Luxury beyond transport</p>
+      <p>Luxury Chauffeur Services Cape Town</p>
     </div>
 
-    <!-- QUICK LINKS -->
+    <!-- SERVICES -->
     <div class="footer-links">
+      <h3>Services</h3>
+      <a href="airport-transfers.html">Airport Transfers</a>
+      <a href="chauffeur-service.html">Private Chauffeur</a>
+      <a href="vip-transfers.html">VIP Transfers</a>
+      <a href="wine-tours.html">Wine Tours</a>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-links">
+      <h3>Company</h3>
       <a href="index.html">Home</a>
       <a href="fleet.html">Fleet</a>
       <a href="services.html">Services</a>
@@ -336,16 +391,9 @@ dynamicStatus(document.getElementById("status-staria"));
       <a href="booking.html">Booking</a>
     </div>
 
-    <!-- SERVICES -->
-    <div class="footer-links">
-      <a href="airport-transfers.html">Airport Transfers</a>
-      <a href="chauffeur-service.html">Private Chauffeur</a>
-      <a href="vip-transfers.html">VIP Transfers</a>
-      <a href="wine-tours.html">Wine Tours</a>
-    </div>
-
-    <!-- CONTACT + SOCIAL -->
+    <!-- CONTACT -->
     <div>
+      <h3>Contact</h3>
       <p><strong>Call</strong><br>+27 79 622 0357</p>
       <p><strong>Email</strong><br>reservations@legrant-tours.co.za</p>
 
@@ -366,22 +414,15 @@ dynamicStatus(document.getElementById("status-staria"));
 
   </div>
 
+  <!-- SEO BOOST TEXT -->
+  <div style="margin-top:40px; max-width:900px; font-size:14px; opacity:0.7;">
+    <p>
+      Le Grant Tours & Transfers provides luxury chauffeur services in Cape Town including airport transfers, private tours, corporate travel and VIP transport. Our fleet includes Mercedes-Benz V-Class, S-Class, C-Class, G-Class and Hyundai Staria vehicles serving Cape Town, Camps Bay, Clifton, Sea Point, Constantia and the Cape Winelands.
+    </p>
+  </div>
+
   <p class="copyright">
     © 2026 Le Grant Tours & Transfers. All rights reserved.
   </p>
 
 </footer>
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/27796220357" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- JS -->
-<script>
-function bookCar(car){
-  let phone="27796220357";
-  let msg=`Hello, I want to book a ${car} in Cape Town`;
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
-}
-</script>
