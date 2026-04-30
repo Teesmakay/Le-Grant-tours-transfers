@@ -1451,3 +1451,8 @@ img.logo-img {
   border-radius: 6px;
   color: #1F4045;
 }
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
