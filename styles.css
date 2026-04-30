@@ -1549,3 +1549,65 @@ button {
   max-width: 1400px;
   margin: 0 auto;
 }
+/* ===== KEEP HERO + NAV FULL WIDTH ===== */
+.hero,
+.nav,
+.menu-overlay {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ===== CONSTRAIN CONTENT ONLY (PREMIUM LOOK) ===== */
+section:not(.hero),
+.fleet-wrapper,
+.contact-container,
+.pilots-container,
+.reviews-grid,
+.services-grid,
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== SECTION PADDING (LESS ZOOMED) ===== */
+.fleet,
+.services,
+.contact-section,
+.reviews,
+.pilots-section {
+  padding: 80px 40px;
+}
+
+/* ===== HERO TEXT FIX (DON’T PUSH TOO FAR LEFT) ===== */
+.hero-text {
+  left: 8%; /* was 10% */
+  max-width: 480px;
+}
+
+/* ===== HEADINGS SLIGHTLY SMALLER ===== */
+.hero h1 {
+  font-size: 52px;
+}
+
+.fleet-info h2,
+.services-header h2,
+.pilots-content h2,
+.contact-info h2 {
+  font-size: 36px;
+}
+
+/* ===== TEXT BALANCE ===== */
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== NAV PADDING FIX ===== */
+.nav {
+  padding: 15px 60px;
+}
+
+/* ===== FOOTER STRUCTURE FIX ===== */
+.footer {
+  padding: 80px 40px;
+}
